@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Егор Мирошниченко](https://up.htmlacademy.ru/htmlcss/36/user/2257983).
-* Наставник: `Михаил Кислый`(https://htmlacademy.ru/profile/smart-grizzly).
+* Наставник: [Михаил Кислый](https://htmlacademy.ru/profile/smart-grizzly).
 
 ---
 
