@@ -14,7 +14,12 @@
       </a>
       <nav class="navigation">
         <form class="search-form" action="catalog.html" method="post">
-          <input class="search-field" type="text" name="search" placeholder="Поиск по сайту">
+          <label class="search-form-label" for="search-name">
+            <span class="visually-hidden">
+              Поиск
+            </span>
+          </label>
+          <input class="search-field" type="search" name="search" id="search-name" placeholder="Поиск по сайту">
           <button class="search-button" type="submit">Найти</button>
         </form>
         <ul class="navigation-list">
@@ -29,32 +34,31 @@
           </li>
         </ul>
 
-        <div class="katalog-wrapper">
-          <h2 class="katalog">Каталог товаров</h2>
-          <img class="katalog-img" src="#" alt="Каталог">
+        <div class="catalog-wrapper">
+          <h2 class="catalog">Каталог товаров</h2>
+          <img class="catalog-img" src="#" alt="Каталог">
 
-          <ul class="katalog-list">
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Виртуальная реальность</a>
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Виртуальная реальность</a>
             </li>
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Моноподы для селфи</a>
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Моноподы для селфи</a>
             </li>
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Экшн-камеры</a>
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Экшн-камеры</a>
             </li>
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Фитнес-браслеты</a>
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Фитнес-браслеты</a>
             </li>
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Умные часы</a>
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Умные часы</a>
             </li>
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Квадрокоптеры</a>
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Квадрокоптеры</a>
             </li>
           </ul>
         </div>
-
 
         <ul class="menu-list">
           <li class="menu-item">
@@ -70,16 +74,14 @@
       </nav>
     </header>
 
-
     <main class="main-index">
 
       <section class="product-slider">
         <h2 class="visually-hidden">Устройства</h2>
 
-
-        <div class="product-1">
+        <div class="product-one">
           <span class="product-number">01</span>
-          <img class="product-1-img" src="#" alt="Квадрокоптер">
+          <img class="product-one-img" src="#" alt="Квадрокоптер">
           <button class="product-button product-next" type="button">
             <span class="visually-hidden">Следующее устройство</span>
           </button>
@@ -105,9 +107,9 @@
           </ul>
         </div>
 
-        <div class="product-2">
+        <div class="product-two">
           <span class="product-number">02</span>
-          <img class="product-2-img" src="#" alt="Фитнес браслет">
+          <img class="product-two-img" src="#" alt="Фитнес браслет">
           <button class="product-button product-next" type="button">
             <span class="visually-hidden">Следующее устройство</span>
           </button>
@@ -128,9 +130,9 @@
           </ul>
         </div>
 
-        <div class="product-3">
+        <div class="product-three">
           <span class="product-number">03</span>
-          <img class="product-3-img" src="#" alt="Палки для селфи">
+          <img class="product-three-img" src="#" alt="Палки для селфи">
           <button class="product-button product-next" type="button">
             <span class="visually-hidden">Следующее устройство</span>
           </button>
@@ -282,7 +284,12 @@
           длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
 
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="subscribe-field" type="email" name="subscribe" placeholder="Ваш e-mail">
+          <label class="subscribe-form-label" for="subscribe-name">
+            <span class="visually-hidden">
+              Подписка
+            </span>
+          </label>
+          <input class="subscribe-field" type="email" name="subscribe" id="subscribe-name" placeholder="Ваш e-mail">
           <button class="subscribe-button" type="submit">Подписаться</button>
         </form>
 

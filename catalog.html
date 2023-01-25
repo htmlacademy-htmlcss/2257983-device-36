@@ -14,7 +14,12 @@
       </a>
       <nav class="navigation">
         <form class="search-form" action="catalog.html" method="post">
-          <input class="search-field" type="text" name="search" placeholder="Поиск по сайту">
+          <label class="search-form-label" for="search-name">
+            <span class="visually-hidden">
+              Поиск
+            </span>
+          </label>
+          <input class="search-field" type="search" name="search" id="search-name" placeholder="Поиск по сайту">
           <button class="search-button" type="submit">Найти</button>
         </form>
         <ul class="navigation-list">
@@ -29,32 +34,31 @@
           </li>
         </ul>
 
-        <div class="katalog-wrapper">
-          <h2 class="katalog">Каталог товаров</h2>
-          <img class="katalog-img" src="#" alt="Каталог">
+        <div class="catalog-wrapper">
+          <h2 class="catalog">Каталог товаров</h2>
+          <img class="catalog-img" src="#" alt="Каталог">
 
-          <ul class="katalog-list">
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Виртуальная реальность</a>
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Виртуальная реальность</a>
             </li>
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Моноподы для селфи</a>
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Моноподы для селфи</a>
             </li>
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Экшн-камеры</a>
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Экшн-камеры</a>
             </li>
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Фитнес-браслеты</a>
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Фитнес-браслеты</a>
             </li>
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Умные часы</a>
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Умные часы</a>
             </li>
-            <li class="katalog-item">
-              <a class="katalog-item-link" href="#">Квадрокоптеры</a>
+            <li class="catalog-item">
+              <a class="catalog-item-link" href="#">Квадрокоптеры</a>
             </li>
           </ul>
         </div>
-
 
         <ul class="menu-list">
           <li class="menu-item">
@@ -70,70 +74,55 @@
       </nav>
     </header>
 
-    <main class="main-inner">
-      <header class="inner-header">
-        <h1 class="inner-header-title">Моноподы для селфи</h1>
-      </header>
-
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="index.html">Главная</a>
-        </li>
-        <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="catalog.html">Каталог товаров</a>
-        </li>
-        <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link">Моноподы под селфи</a>
-        </li>
-      </ul>
+    <main class="main-catalog">
 
       <section class="product-filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <span class="filter-title">фильтр:</span>
 
-        <form class="katalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="katalog-filter-group">
-            <legend class="katalog-filter-title">Стоимость</legend>
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Стоимость</legend>
           </fieldset>
-          <fieldset class="katalog-filter-group">
-            <legend class="katalog-filter-title">Цвет</legend>
-            <ul class="katalog-filter-list">
-              <li class="katalog-filter-item">
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Цвет</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="black" checked> Черный
                 </label>
               </li>
-              <li class="katalog-filter-item">
+              <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="white" checked> Белый
                 </label>
               </li>
-              <li class="katalog-filter-item">
+              <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="blue"> Синий
                 </label>
               </li>
-              <li class="katalog-filter-item">
+              <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="red"> Красный
                 </label>
               </li>
-              <li class="katalog-filter-item">
+              <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="pink"> Розовый
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="katalog-filter-group">
-            <legend class="katalog-filter-title">Bluetooth</legend>
-            <ul class="katalog-filter-list">
-              <li class="katalog-filter-item">
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Bluetooth</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="bluetooth-group" value="yes" checked> Есть
                 </label>
               </li>
-              <li class="katalog-filter-item">
+              <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="bluetooth-group" value="no"> Нет
                 </label>
