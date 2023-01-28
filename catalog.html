@@ -10,7 +10,7 @@
     <header class="main-header">
       <h1 class="visually-hidden">Магазин Device</h1>
       <a class="navigation-logo" href="index.html">
-        <img class="logo" src="#" alt="Логотип магазина Device">
+        <img class="logo" src="images\logo\device-logo.svg" width="145" height="36" alt="Магазин Device">
       </a>
       <nav class="navigation">
         <form class="search-form" action="catalog.html" method="post">
@@ -19,24 +19,28 @@
               Поиск
             </span>
           </label>
+          <img class="search-image" src="images\icon\search.svg" alt="Поиск">
           <input class="search-field" type="search" name="search" id="search-name" placeholder="Поиск по сайту">
           <button class="search-button" type="submit">Найти</button>
         </form>
         <ul class="navigation-list">
           <li class="navigation-item">
+            <img class="login-image" src="images\icon\login.svg" alt="Вход в личный кабинет">
             <a class="navigation-link" href="#">Войти</a>
           </li>
           <li class="navigation-item">
+            <img class="compare-image" src="images\icon\compare.svg" alt="Сравнение товара">
             <a class="navigation-link" href="#">Сравнить</a>
           </li>
           <li class="navigation-item">
+            <img class="card-image" src="images\icon\card.svg" alt="Корзина">
             <a class="navigation-link" href="#">Корзина</a>
           </li>
         </ul>
 
         <div class="catalog-wrapper">
           <h2 class="catalog">Каталог товаров</h2>
-          <img class="catalog-img" src="#" alt="Каталог">
+          <img class="catalog-image" src="images\icon\catalog-button.svg" alt="Каталог">
 
           <ul class="catalog-list">
             <li class="catalog-item">
@@ -83,9 +87,11 @@
         <li class="breadcrumbs-item">
            <a class="breadcrumbs-link" href="index.html">Главная</a>
         </li>
+        <img src="images\icon\breadscrumbs-arrow.svg" alt="">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="catalog.html">Каталог товаров</a>
         </li>
+        <img src="images\icon\breadscrumbs-arrow.svg" alt="">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link">Моноподы под селфи</a>
         </li>
@@ -152,11 +158,14 @@
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
         </select>
+        <img src="images\icon\popular-arrow.svg" alt="">
 
         <a class="button select-button" href="#">
+          <img src="images\icon\sort-button.svg" alt="">
           <span class="visually-hidden">От меньшего к большему</span>
         </a>
         <a class="button select-button" href="#">
+          <img src="images\icon\sort-button.svg" alt="">
           <span class="visually-hidden">От большего к меньшему</span>
         </a>
       </section>
@@ -167,7 +176,7 @@
         <ul class="product-list">
           <li class="product-item">
             <a class="product-link" href="#">
-              <img class="product-img" src="" alt="">
+              <img class="product-img" src="images\products\product-1.jpg" width="360" height="380" alt="">
               <b class="product-name">Любительская <br>
                 селфи-палка</b>
             </a>
@@ -175,7 +184,7 @@
           </li>
           <li class="product-item">
             <a class="product-link" href="#">
-              <img class="product-img" src="" alt="">
+              <img class="product-img" src="images\products\product-2.jpg" width="360" height="380" alt="">
               <b class="product-name">Профессиональная <br>
                 селфи-палка</b>
             </a>
@@ -183,7 +192,7 @@
           </li>
           <li class="product-item">
             <a class="product-link" href="#">
-              <img class="product-img" src="" alt="">
+              <img class="product-img" src="images\products\product-3.jpg" width="360" height="380" alt="">
               <b class="product-name">Непотопляемая <br>
                 селфи-палка</b>
             </a>
@@ -191,7 +200,7 @@
           </li>
           <li class="product-item">
             <a class="product-link" href="#">
-              <img class="product-img" src="" alt="">
+              <img class="product-img" src="images\products\product-4.jpg" width="360" height="380" alt="">
               <b class="product-name">Селфи-палка «Следуй <br>
                 за мной»</b>
             </a>
@@ -229,7 +238,7 @@
 
     <footer class="main-footer">
       <h2 class="visually-hidden">Магазин Device</h2>
-      <img class="footer-logo" src="#" alt="Логотип магазина Device">
+      <img class="footer-logo" src="images\logo\device-logo.svg" width="145" height="36" alt="Магазин Device">
 
       <section class="footer-address">
         <h2 class="visually-hidden">Адрес</h2>
@@ -266,22 +275,29 @@
         </address>
       </section>
 
+      <svg width="80" height="7">
+        <rect width="80" height="7" style="fill:#FFC700"/>
+     </svg>
+
       <section class="footer-social">
         <h2 class="visually-hidden">Социальные сети</h2>
 
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="social-button" href="https://t.me/htmlacademy">
+              <img class="telegram-image" src="images\icon\telegram.svg" alt="Телеграм">
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
+              <img class="youtube-image" src="images\icon\youtube.svg" alt="Ютуб">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="social-button" href="https://twitter.com/htmlacademy_ru">
+              <img class="twitter-image" src="images\icon\twitter.svg" alt="твиттер">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
@@ -289,6 +305,7 @@
       </section>
 
       <a class="footer-academy-link" href="https://htmlacademy.ru/">
+        <img class="htmlacademy-link" src="images\icon\html-academy.svg" width="115" height="33" alt="Логотип разработчика htmlacademy">
         <span class="visually-hidden">Логотип разработчика .htmlacademy</span>
       </a>
     </footer>
