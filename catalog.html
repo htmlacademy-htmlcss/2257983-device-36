@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles\styles.css">
   </head>
 
   <body>
@@ -80,7 +81,7 @@
 
     <main class="main-inner">
       <header class="inner-header">
-        <h1 class="inner-header-title">Моноподы для селфи</h1>
+        <h2 class="inner-header-title">Моноподы для селфи</h2>
       </header>
 
       <ul class="breadcrumbs">
@@ -99,7 +100,7 @@
 
       <section class="product-filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <span class="filter-title">фильтр:</span>
+        <span class="filter-title">Фильтр:</span>
 
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
@@ -150,24 +151,27 @@
               </li>
             </ul>
           </fieldset>
-          <button class="filter-button" type="submit">Показать</button>
+          <button class="button filter-button" type="submit">Показать</button>
         </form>
 
-        <select class="select-control" aria-label="Сортировка товара">
-          <option value="popular">Популярные</option>
-          <option value="cheap">Сначала дешёвые</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
-        <img src="images\icon\popular-arrow.svg" alt="">
+        <div class="sorting">
+          <span class="sorting-text">Сортировка</span>
+          <select class="select-control" aria-label="Сортировка товара">
+            <option value="popular">Популярные</option>
+            <option value="cheap">Сначала дешёвые</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+          <img src="images\icon\popular-arrow.svg" alt="">
 
-        <a class="button select-button" href="#">
-          <img src="images\icon\sort-button.svg" alt="">
-          <span class="visually-hidden">От меньшего к большему</span>
-        </a>
-        <a class="button select-button" href="#">
-          <img src="images\icon\sort-button.svg" alt="">
-          <span class="visually-hidden">От большего к меньшему</span>
-        </a>
+          <a class="select-button" href="#">
+            <img src="images\icon\sort-button.svg" alt="">
+            <span class="visually-hidden">От меньшего к большему</span>
+          </a>
+          <a class="select-button" href="#">
+            <img src="images\icon\sort-button.svg" alt="">
+            <span class="visually-hidden">От большего к меньшему</span>
+          </a>
+        </div>
       </section>
 
       <section class="products">
@@ -208,14 +212,14 @@
           </li>
         </ul>
 
-        <button class="load-more" type="button">Загрузить ещё</button>
+        <button class="button load-more" type="button">Загрузить ещё</button>
 
         <ul class="pagination-list">
           <li class="pagination-item">
-            <a class="pagination-link" href="#">Назад</a>
+            <a class="pagination-link-previous" href="#">Назад</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">1</a>
+            <a class="pagination-link pagination-link-active" href="#">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -230,7 +234,7 @@
             <a class="pagination-link" href="#">15</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">Вперед</a>
+            <a class="pagination-link-next" href="#">Вперёд</a>
           </li>
         </ul>
       </section>
@@ -271,7 +275,7 @@
       <section class="footer-phone">
         <h2 class="visually-hidden">Телефон</h2>
         <address class="footer-address-phone">
-          <a href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+          <a class="footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
         </address>
       </section>
 
@@ -285,19 +289,19 @@
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="social-button" href="https://t.me/htmlacademy">
-              <img class="telegram-image" src="images\icon\telegram.svg" alt="Телеграм">
+              <img class="telegram-image" src="images\icon\telegram.svg" width="40" height="40" alt="Телеграм">
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
-              <img class="youtube-image" src="images\icon\youtube.svg" alt="Ютуб">
+              <img class="youtube-image" src="images\icon\youtube.svg" width="40" height="40" alt="Ютуб">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="social-button" href="https://twitter.com/htmlacademy_ru">
-              <img class="twitter-image" src="images\icon\twitter.svg" alt="твиттер">
+              <img class="twitter-image" src="images\icon\twitter.svg" width="40" height="40" alt="твиттер">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
