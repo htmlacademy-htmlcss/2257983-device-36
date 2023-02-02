@@ -268,7 +268,6 @@ body {
 .subscribe-button {
   width: 253px;
   height: 54px;
-  border-color: #C4C4C4;
   background-color: inherit;
   border: 3px solid #C4C4C4;
 }
@@ -320,6 +319,7 @@ body {
 
 .breadcrumbs-link {
   text-decoration: none;
+  color: #000000;
 }
 
 /*product-filter*/
