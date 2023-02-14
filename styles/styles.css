@@ -958,7 +958,7 @@ body {
 
   display: grid;
   grid-template-columns: 226px 77px;
-  grid-template-rows: 380px 40px;
+  grid-template-rows: 380px auto;
   gap: 32px 57px;
 
   grid-template-areas: "img img"
@@ -974,7 +974,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   letter-spacing: -0.02em;
-  
+
 
   display: block;
   color: #000000;
