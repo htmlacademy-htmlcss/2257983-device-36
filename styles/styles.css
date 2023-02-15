@@ -155,9 +155,11 @@ body {
   display: inline;
 }
 
+/*
 .menu-item:not(:last-child) {
   margin-right: 45px;
 }
+*/
 
 .menu-item-link {
   margin: 0;
@@ -170,6 +172,10 @@ body {
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+}
+
+.menu-item:not(:last-child) .menu-item-link {
+  margin-right: 45px;
 }
 
 /*product-slider*/
@@ -482,6 +488,7 @@ body {
 
 .delivery-company-list {
   margin: 0;
+  margin-left: 17px;
   margin-bottom: 30px;
   padding: 0;
 }
