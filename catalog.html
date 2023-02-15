@@ -26,48 +26,54 @@
             <button class="search-button" type="submit">Найти</button>
           </form>
 
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <img class="login-image" src="images/icon/login.svg" width="13" height="12" alt="Вход в личный кабинет">
+          <ul class="header-login-list">
+            <li class="header-login-item">
+              <img class="navigation-image" src="images/icon/login.svg" width="13" height="12" alt="Вход в личный кабинет">
               <a class="navigation-link" href="#">Войти</a>
             </li>
+          </ul>
+
+          <ul class="navigation-list">
             <li class="navigation-item">
-              <img class="compare-image" src="images/icon/compare.svg" width="10" height="12" alt="Сравнение товара">
+              <img class="navigation-image" src="images/icon/compare.svg" width="10" height="12" alt="Сравнение товара">
               <a class="navigation-link" href="#">Сравнить</a>
             </li>
             <li class="navigation-item">
-              <img class="card-image" src="images/icon/card.svg" width="16" height="14" alt="Корзина">
+              <img class="navigation-image" src="images/icon/card.svg" width="16" height="14" alt="Корзина">
               <a class="navigation-link" href="#">Корзина</a>
             </li>
           </ul>
         </div>
 
         <div class="navigation-catalog">
-          <h2 class="catalog">Каталог товаров</h2>
-          <img class="catalog-image" src="images/icon/catalog-button.svg" width="50" height="50" alt="Каталог">
+          <div class="catalog-menu">
+            <h2 class="catalog">Каталог товаров</h2>
+            <img class="catalog-image" src="images/icon/catalog-button.svg" width="50" height="50" alt="Каталог">
 
 <!-- Вложенный каталог
             <ul class="catalog-list">
-            <li class="catalog-item">
-              <a class="catalog-item-link" href="#">Виртуальная реальность</a>
-            </li>
-            <li class="catalog-item">
-              <a class="catalog-item-link" href="#">Моноподы для селфи</a>
-            </li>
-            <li class="catalog-item">
-              <a class="catalog-item-link" href="#">Экшн-камеры</a>
-            </li>
-            <li class="catalog-item">
-              <a class="catalog-item-link" href="#">Фитнес-браслеты</a>
-            </li>
-            <li class="catalog-item">
-              <a class="catalog-item-link" href="#">Умные часы</a>
-            </li>
-            <li class="catalog-item">
-              <a class="catalog-item-link" href="#">Квадрокоптеры</a>
-            </li>
-          </ul>
+              <li class="catalog-item">
+                <a class="catalog-item-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-item">
+                <a class="catalog-item-link" href="#">Моноподы для селфи</a>
+              </li>
+              <li class="catalog-item">
+                <a class="catalog-item-link" href="#">Экшн-камеры</a>
+              </li>
+              <li class="catalog-item">
+                <a class="catalog-item-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-item">
+                <a class="catalog-item-link" href="#">Умные часы</a>
+              </li>
+              <li class="catalog-item">
+                <a class="catalog-item-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
 -->
+          </div>
+
           <ul class="menu-list">
             <li class="menu-item">
               <a class="menu-item-link" href="#">Доставка</a>
@@ -167,29 +173,26 @@
           </div>
 
           <div class="sorting-products-wrapper">
-
             <div class="sorting">
-              <span class="sorting-text">Сортировка</span>
-              <div class="select-control-wrapper">
+              <div class="sorting-wrapper">
+                <span class="sorting-text">Сортировка:</span>
+
                 <select class="select-control" aria-label="Сортировка товара">
                   <option value="popular">Популярные</option>
                   <option value="cheap">Сначала дешёвые</option>
                   <option value="expensive">Сначала дорогие</option>
                 </select>
-                <button>
-                  <img src="images/icon/popular-arrow.svg" alt="">
-                </button>
-              </div>
 
-              <div class="sort-button-wrapper">
-                <a class="select-button" href="#">
-                  <img src="images/icon/sort-button.svg" alt="">
-                  <span class="visually-hidden">От меньшего к большему</span>
-                </a>
-                <a class="select-button" href="#">
-                  <img src="images/icon/sort-button.svg" alt="">
-                  <span class="visually-hidden">От большего к меньшему</span>
-                </a>
+                <div class="sort-button-wrapper">
+                  <a class="select-button" href="#">
+                    <img class="select-button-image" src="images/icon/sort-button.svg" alt="От меньшего к большему">
+                    <span class="visually-hidden">От меньшего к большему</span>
+                  </a>
+                  <a class="select-button" href="#">
+                    <img class="select-button-image" src="images/icon/sort-button.svg" alt="От большего к меньшему">
+                    <span class="visually-hidden">От большего к меньшему</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -200,34 +203,34 @@
                   <li class="product-item">
                     <a class="product-link" href="#">
                       <img class="product-img" src="images/products/product-1.jpg" width="360" height="380" alt="">
-                      <b class="product-name">Любительская <br>
+                      <b class="product-name">Любительская
                         селфи-палка</b>
+                      <span class="product-price">500 ₽</span>
                     </a>
-                    <span class="product-price">500 ₽</span>
                   </li>
                   <li class="product-item">
                     <a class="product-link" href="#">
                       <img class="product-img" src="images/products/product-2.jpg" width="360" height="380" alt="">
-                      <b class="product-name">Профессиональная <br>
+                      <b class="product-name">Профессиональная
                         селфи-палка</b>
+                      <span class="product-price">1 500 ₽</span>
                     </a>
-                    <span class="product-price">1 500 ₽</span>
                   </li>
                   <li class="product-item">
                     <a class="product-link" href="#">
                       <img class="product-img" src="images/products/product-3.jpg" width="360" height="380" alt="">
                       <b class="product-name">Непотопляемая <br>
                         селфи-палка</b>
+                      <span class="product-price">2 500 ₽</span>
                     </a>
-                    <span class="product-price">2 500 ₽</span>
+
                   </li>
                   <li class="product-item">
                     <a class="product-link" href="#">
                       <img class="product-img" src="images/products/product-4.jpg" width="360" height="380" alt="">
-                      <b class="product-name">Селфи-палка «Следуй <br>
-                        за мной»</b>
+                      <b class="product-name">Селфи-палка «Следуй за мной»</b>
+                      <span class="product-price">1 500 ₽</span>
                     </a>
-                    <span class="product-price">1 500 ₽</span>
                   </li>
                 </ul>
 
@@ -254,7 +257,6 @@
                   </ul>
                   <a class="pagination-link-next" href="#">Вперёд</a>
                 </div>
-
               </div>
             </section>
           </div>
@@ -263,83 +265,87 @@
     </main>
 
     <footer class="main-footer">
-
       <div class="footer-wrapper">
-        <h2 class="visually-hidden">Магазин Device</h2>
-        <a class="footer-logo" href="index.html">
-          <img class="logo" src="images/logo/device-logo.svg" width="145" height="36" alt="Магазин Device">
-        </a>
+        <div class="footer-logo-address-line">
+          <h2 class="visually-hidden">Магазин Device</h2>
+          <a class="footer-logo" href="index.html">
+            <img class="logo" src="images/logo/device-logo.svg" width="145" height="36" alt="Магазин Device">
+          </a>
 
-        <section class="footer-address">
-          <h2 class="visually-hidden">Адрес</h2>
-          <address class="footer-address-address">
-            <p class="footer-address-text">Санкт-Петербург, набережная
-              реки Карповки, 5, литера П.</p>
-          </address>
-        </section>
-
-        <section class="footer-menu">
-          <ul class="footer-menu-list">
-            <li class="footer-menu-item">
-              <a class="footer-menu-link" href="">
-                <h2 class="footer-menu-title">Доставка</h2>
-              </a>
-            </li>
-            <li class="footer-menu-item">
-              <a class="footer-menu-link" href="">
-                <h2 class="footer-menu-title">Гарантия</h2>
-              </a>
-            </li>
-            <li class="footer-menu-item">
-              <a class="footer-menu-link" href="">
-                <h2 class="footer-menu-title">Контакты</h2>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <section class="footer-phone">
-            <h2 class="visually-hidden">Телефон</h2>
-            <address class="footer-address-phone">
-              <a class="footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+          <section class="footer-address">
+            <h2 class="visually-hidden">Адрес</h2>
+            <address class="footer-address-address">
+              <p class="footer-address-text">Санкт-Петербург, набережная
+                реки Карповки, 5, литера П.</p>
             </address>
-        </section>
+          </section>
 
-        <svg class="footer-line" width="80" height="7">
+          <svg width="80" height="7">
             <rect width="80" height="7" style="fill:#FFC700"/>
-        </svg>
+          </svg>
+        </div>
 
-        <section class="footer-social">
-          <h2 class="visually-hidden">Социальные сети</h2>
+        <div class="footer-menu-social">
+          <section class="footer-menu">
+            <ul class="footer-menu-list">
+              <li class="footer-menu-item">
+                <a class="footer-menu-link" href="">
+                  <h2 class="footer-menu-title">Доставка</h2>
+                </a>
+              </li>
+              <li class="footer-menu-item">
+                <a class="footer-menu-link" href="">
+                  <h2 class="footer-menu-title">Гарантия</h2>
+                </a>
+              </li>
+              <li class="footer-menu-item">
+                <a class="footer-menu-link" href="">
+                  <h2 class="footer-menu-title">Контакты</h2>
+                </a>
+              </li>
+            </ul>
+          </section>
 
-          <ul class="footer-social-list">
-            <li class="footer-social-item">
-              <a class="social-button" href="https://t.me/htmlacademy">
-                <img class="social-image" src="images/icon/telegram.svg" width="40" height="40" alt="Телеграм">
-                <span class="visually-hidden">Telegram</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
-                <img class="social-image" src="images/icon/youtube.svg" width="40" height="40" alt="Ютуб">
-                <span class="visually-hidden">YouTube</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="social-button" href="https://twitter.com/htmlacademy_ru">
-                <img class="social-image" src="images/icon/twitter.svg" width="40" height="40" alt="твиттер">
-                <span class="visually-hidden">Twitter</span>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <section class="footer-social">
+            <h2 class="visually-hidden">Социальные сети</h2>
 
-        <a class="footer-academy-link" href="https://htmlacademy.ru/">
-          <img class="htmlacademy-link" src="images/icon/html-academy.svg" width="115" height="33" alt="Логотип разработчика htmlacademy">
-          <span class="visually-hidden">Логотип разработчика .htmlacademy</span>
-        </a>
+            <ul class="footer-social-list">
+              <li class="footer-social-item">
+                <a class="social-button" href="https://t.me/htmlacademy">
+                  <img class="social-image" src="images/icon/telegram.svg" width="40" height="40" alt="Телеграм">
+                  <span class="visually-hidden">Telegram</span>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
+                  <img class="social-image" src="images/icon/youtube.svg" width="40" height="40" alt="Ютуб">
+                  <span class="visually-hidden">YouTube</span>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a class="social-button" href="https://twitter.com/htmlacademy_ru">
+                  <img class="social-image" src="images/icon/twitter.svg" width="40" height="40" alt="твиттер">
+                  <span class="visually-hidden">Twitter</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
 
+        <div class="footer-phone-academy-link">
+          <section class="footer-phone">
+              <h2 class="visually-hidden">Телефон</h2>
+              <address class="footer-address-phone">
+                <a class="footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+              </address>
+          </section>
+          <a class="footer-academy-link" href="https://htmlacademy.ru/">
+            <img class="htmlacademy-link" src="images/icon/html-academy.svg" width="115" height="33" alt="Логотип разработчика htmlacademy">
+            <span class="visually-hidden">Логотип разработчика .htmlacademy</span>
+          </a>
+        </div>
       </div>
     </footer>
+
   </body>
 </html>
