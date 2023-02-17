@@ -9,9 +9,10 @@
   <body>
     <header class="main-header">
       <h1 class="visually-hidden">Магазин Device</h1>
-      <a class="navigation-logo" href="index.html">
-        <img class="logo" src="images/logo/device-logo.svg" width="145" height="36" alt="Магазин Device">
+      <a class="header-logo" href="index.html">
+        <img class="header-logo-img" src="images/logo/device-logo.svg" width="145" height="36" alt="Магазин Device">
       </a>
+
       <nav class="navigation">
         <div class="navigation-user">
           <form class="search-form" action="catalog.html" method="post">
@@ -200,39 +201,51 @@
         <ul class="category-list">
           <li class="category-item">
             <a class="category-item-wrapper" href="catalog.html">
-              <img class="category-item-image" src="images/category/virtual-reality-glasses.svg" width="97" height="55" alt="Очки виртуальной реальности">
+              <div class="category-item-image-wrapper">
+                <img class="category-item-image" src="images/category/virtual-reality-glasses.svg" width="97" height="55" alt="Очки виртуальной реальности">
+              </div>
+              <span class="category-item-description">Виртуальная реальность</span>
             </a>
-            <span class="category-item-description">Виртуальная реальность</span>
           </li>
           <li class="category-item">
             <a class="category-item-wrapper" href="catalog.html">
-              <img class="category-item-image" src="images/category/monopod.svg" width="86" height="117" alt="Монопод для селфи">
+              <div class="category-item-image-wrapper">
+                <img class="category-item-image" src="images/category/monopod.svg" width="86" height="117" alt="Монопод для селфи">
+              </div>
+              <span class="category-item-description">Моноподы для селфи</span>
             </a>
-            <span class="category-item-description">Моноподы для селфи</span>
           </li>
           <li class="category-item">
             <a class="category-item-wrapper" href="catalog.html">
-             <img class="category-item-image" src="images/category/action-camera.svg" width="71" height="87" alt="Экшн-камера">
+              <div class="category-item-image-wrapper">
+                <img class="category-item-image" src="images/category/action-camera.svg" width="71" height="87" alt="Экшн-камера">
+              </div>
+              <span class="category-item-description">Экшн-камеры</span>
             </a>
-            <span class="category-item-description">Экшн-камеры</span>
           </li>
           <li class="category-item">
             <a class="category-item-wrapper" href="catalog.html">
-             <img class="category-item-image" src="images/category/fitness-tracker.svg" width="107" height="65" alt="Фитнес-браслет">
+              <div class="category-item-image-wrapper">
+                <img class="category-item-image" src="images/category/fitness-tracker.svg" width="107" height="65" alt="Фитнес-браслет">
+              </div>
+              <span class="category-item-description">Фитнес-браслеты</span>
            </a>
-          <span class="category-item-description">Фитнес-браслеты</span>
           </li>
           <li class="category-item">
             <a class="category-item-wrapper" href="catalog.html">
-             <img class="category-item-image" src="images/category/smart-watch.svg" width="56" height="98" alt="Умные часы">
+              <div class="category-item-image-wrapper   ">
+                <img class="category-item-image" src="images/category/smart-watch.svg" width="56" height="98" alt="Умные часы">
+              </div>
+              <span class="category-item-description">Умные часы</span>
             </a>
-            <span class="category-item-description">Умные часы</span>
           </li>
           <li class="category-item">
             <a class="category-item-wrapper" href="catalog.html">
-             <img class="category-item-image" src="images/category/quadrocopter.svg" width="132" height="69" alt="Квадрокоптер">
+              <div class="category-item-image-wrapper">
+                <img class="category-item-image" src="images/category/quadrocopter.svg" width="132" height="69" alt="Квадрокоптер">
+              </div>
+              <span class="category-item-description">Квадрокоптеры</span>
             </a>
-            <span class="category-item-description">Квадрокоптеры</span>
           </li>
         </ul>
 
@@ -300,13 +313,15 @@
 
       <section class="delivery">
         <h2 class="visually-hidden">Доставка</h2>
-        <div class="delivery-car-image-wrapper">
-          <img class="delivery-car-image" src="images/icon/delivery-car.svg" width="47" height="31" alt="Курьерская машина">
-        </div>
-        <P class="delivery-description">Доставим редкий товар под заказ</P>
-        <button class="delivery-button">
-          <img class="delivery-info-image" src="images/icon/delivery-info.svg" width="40" height="40" alt="Доставка под заказ">
-        </button>
+        <a class="delivery-popup-link" href="#">
+          <div class="delivery-car-image-wrapper">
+            <img class="delivery-car-image" src="images/icon/delivery-car.svg" width="47" height="31" alt="Курьерская машина">
+          </div>
+          <p class="delivery-description">Доставим редкий товар под заказ</P>
+          <div class="delivery-button">
+            <img class="delivery-info-image" src="images/icon/delivery-info.svg" width="40" height="40" alt="Доставка под заказ">
+          </div>
+        </a>
       </section>
 
       <div class="about-us-contacts-wrapper">
@@ -388,7 +403,7 @@
         <div class="footer-logo-address-line">
           <h2 class="visually-hidden">Магазин Device</h2>
           <a class="footer-logo" href="index.html">
-            <img class="logo" src="images/logo/device-logo.svg" width="145" height="36" alt="Магазин Device">
+            <img class="footer-logo-img" src="images/logo/device-logo.svg" width="145" height="36" alt="Магазин Device">
           </a>
 
           <section class="footer-address">
