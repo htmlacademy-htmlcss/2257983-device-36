@@ -605,8 +605,18 @@ body {
 
 .about-us {
   width: 520px;
+  position: relative;
+
   display: flex;
   flex-direction: column;
+}
+
+.about-us::before {
+  position: absolute;
+  content: "";
+  width: 84px;
+  height: 7px;
+  background-color: #000000;
 }
 
 .about-us-title {
@@ -616,7 +626,7 @@ body {
   line-height: 50px;
   color: #000000;
 
-  margin: 40px auto 48px 0;
+  margin: 47px auto 48px 0;
 }
 
 .about-us-text {
@@ -656,9 +666,18 @@ body {
 
 .contacts {
   width: 532px;
+  position: relative;
 
   display: flex;
   flex-direction: column;
+}
+
+.contacts::before {
+  position: absolute;
+  content: "";
+  width: 84px;
+  height: 7px;
+  background-color: #000000;
 }
 
 .contacts-title {
@@ -667,7 +686,7 @@ body {
   font-size: 50px;
   line-height: 50px;
   color: #000000;
-  margin: 40px auto 48px 0;
+  margin: 47px auto 48px 0;
 }
 
 .contacts-text {
@@ -811,11 +830,21 @@ body {
 }
 
 .footer-address-text {
+  position: relative;
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
-  margin-bottom: 64px;
+}
+
+.footer-address-text::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 80px;
+  height: 7px;
+  background-color: #FFC700;
+  top: 104px;
 }
 
 .footer-menu-social {
