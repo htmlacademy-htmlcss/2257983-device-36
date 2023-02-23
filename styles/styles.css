@@ -67,6 +67,19 @@ body {
   margin-bottom: 30px;
 }
 
+.logo-image:hover {
+  opacity: .8;
+}
+
+.logo-image:active {
+  opacity: .5;
+}
+
+.logo-image:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
 .navigation-user {
   width: 1040px;
   margin: 0 auto;
@@ -157,9 +170,9 @@ body {
 }
 
 .catalog-menu {
-
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .catalog {
@@ -171,6 +184,34 @@ body {
   text-transform: uppercase;
   color: #000000;
   margin: 0 7px 0 0;
+}
+
+.catalog-button {
+  z-index: 2;
+}
+
+.catalog-list {
+  width: 1160px;
+  height: 180px;
+  margin: 0;
+  padding: 0;
+
+  display: none;
+  position: absolute;
+  top: 33px;
+  left: -60px;
+  z-index: 1;
+
+  background-color: #FFE17F;
+  outline: 1px solid black;
+}
+
+.catalog-menu:hover .catalog-list {
+  display: block;
+}
+
+.catalog-item {
+  list-style: none;
 }
 
 .catalog-item-link {
@@ -329,40 +370,31 @@ body {
   color: #000000;
   background-color: inherit;
   border: none;
-  position: relative;
-  z-index: 1;
-}
-
-.button-line {
-  position: absolute;
-  top: 40%;
-  bottom: 40%;
-  height: 8px;
-  width: 100%;
-  z-index: -1;
-  background-color: #FFE17F;
-}
-
-.button:hover .button-line {
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.2s;
-}
-
-.button:active .button-line {
-  background-color: #FFCC33;
-}
-
-.button:focus {
-  border: 2px solid #AF4FFF;
 }
 
 .properties-button {
   width: 220px;
   height: 40px;
   margin-bottom: 50px;
+  position: relative;
+}
+
+.properties-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  top: 40%;
+  bottom: 40%;
+  left: 0%;
+  z-index: -1;
+}
+
+.properties-button:hover::before {
+  height: 100%;
+  top: 0%;
+  transition: .3s;
 }
 
 .properties-list {
@@ -498,6 +530,39 @@ body {
 .services-button-three {
   width: 160px;
   height: 40px;
+  position: relative;
+}
+
+.services-button-one::before,
+.services-button-two::before,
+.services-button-three::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  top: 40%;
+  bottom: 40%;
+  left: 0%;
+  z-index: -1;
+}
+
+.services-button-one:hover,
+.services-button-two:hover,
+.services-button-three:hover {
+  padding-left: 58.5px;
+  transition: .3s;
+  color: #FFE17F;
+}
+
+.services-button-one:hover::before,
+.services-button-two:hover::before,
+.services-button-three:hover::before {
+  height: 100%;
+  width: 280px;
+  top: 0%;
+  background-color: #000000;
+  transition: .1s;
 }
 
 .services-text {
@@ -660,6 +725,25 @@ body {
 .about-us-button {
   width: 270px;
   height: 40px;
+  position: relative;
+}
+
+.about-us-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  top: 40%;
+  bottom: 40%;
+  left: 0%;
+  z-index: -1;
+}
+
+.about-us-button:hover::before {
+  height: 100%;
+  top: 0%;
+  transition: .3s;
 }
 
 /*contacts*/
@@ -735,6 +819,25 @@ body {
 .contacts-button {
   width: 259px;
   height: 40px;
+  position: relative;
+}
+
+.contacts-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  top: 40%;
+  bottom: 40%;
+  left: 0%;
+  z-index: -1;
+}
+
+.contacts-button:hover::before {
+  height: 100%;
+  top: 0%;
+  transition: .3s;
 }
 
 /*subscribe*/
@@ -1005,6 +1108,7 @@ body {
 /*catalog-body*/
 .catalog-body {
   background-color: #F0F0F0;
+  z-index: -2;
 }
 
 .catalog-body-body {
@@ -1022,6 +1126,7 @@ body {
   flex-direction: column;
   align-content: center;
   background-color: #F0F0F0;
+  z-index: 0;
 }
 
 .catalog-filter-group {
@@ -1044,7 +1149,25 @@ body {
 .filter-button {
   width: 220px;
   height: 40px;
-  background-color: inherit;
+  position: relative;
+}
+
+.filter-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  top: 40%;
+  bottom: 40%;
+  left: 0%;
+  z-index: -1;
+}
+
+.filter-button:hover::before {
+  height: 100%;
+  top: 0%;
+  transition: .3s;
 }
 
 /*sorting-products-wrapper*/
