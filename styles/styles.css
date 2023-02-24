@@ -62,8 +62,8 @@ body {
   margin: 20px auto -17px;
 }
 
-.header-logo {
-  display: block;
+.header-logo-link {
+  display: inline-block;
   margin-bottom: 30px;
 }
 
@@ -73,11 +73,6 @@ body {
 
 .logo-image:active {
   opacity: .3;
-}
-
-.logo-image:focus {
-  outline: 2px solid #ffffff;
-  outline-offset: 3px;
 }
 
 .navigation-user {
@@ -243,11 +238,9 @@ body {
   display: inline;
 }
 
-/*
-.menu-item:not(:last-child) {
+.menu-item:not(:last-child) .menu-item-link {
   margin-right: 45px;
 }
-*/
 
 .menu-item-link {
   margin: 0;
@@ -262,9 +255,19 @@ body {
   text-decoration: none;
 }
 
-.menu-item:not(:last-child) .menu-item-link {
-  margin-right: 45px;
+.menu-item-link:hover {
+  opacity: .6;
 }
+
+.menu-item-link:active {
+  opacity: .3;
+}
+
+.menu-item-link-active {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
 
 /*product-slider*/
 
@@ -948,6 +951,7 @@ body {
 .subscribe-field {
   width: 557px;
   height: 47px;
+  padding: 0;
   border: none;
   border-bottom: 3px solid #C4C4C4;
   background-color: inherit;
