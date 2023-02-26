@@ -399,7 +399,7 @@ body {
   display: inline;
 }
 
-.slider-pagination-item-wrapper {
+.slider-pagination-item-link {
   display: block;
   height: 8px;
   width: 8px;
