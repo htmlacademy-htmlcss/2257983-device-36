@@ -99,13 +99,6 @@ body {
   height: 40px;
 }
 
-.search-form::before {
-  content: url("../images/icon/search.svg");
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: 16px 16px;
-}
-
 .search-field {
   width: 359px;
   height: 40px;
@@ -114,6 +107,7 @@ body {
   border: 2px solid #000000;
   border-radius: 50px 0 0 50px;
   background-color: inherit;
+
   background-image: url("../images/icon/search.svg");
   background-size: 16px 16px;
   background-repeat: no-repeat;
@@ -405,14 +399,18 @@ body {
   display: inline;
 }
 
-.slider-pagination-item-link {
+.slider-pagination-item-wrapper {
   display: block;
-  content: "";
   height: 8px;
   width: 8px;
   border: 2px solid #000000;
   border-radius: 50%;
 }
+
+.slider-pagination-item-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
 
 .slider-pagination-item-link-active {
   background-color: #000000;
@@ -530,8 +528,13 @@ body {
 }
 
 .properties-button {
+  box-sizing: border-box;
+  display: block;
   width: 220px;
   height: 40px;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-bottom: 50px;
   position: relative;
 }
@@ -922,8 +925,13 @@ body {
 }
 
 .about-us-button {
+  box-sizing: border-box;
+  display: block;
   width: 270px;
   height: 40px;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -1028,8 +1036,13 @@ body {
 }
 
 .contacts-button {
+  box-sizing: border-box;
+  display: block;
   width: 259px;
   height: 40px;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -1590,34 +1603,32 @@ body {
 }
 
 .sort-button-item-link {
-  text-decoration: none;
-  box-sizing: border-box;
   display: block;
-  width: 30px;
+  box-sizing: border-box;
   height: 30px;
-
-
-  background-image: url("../images/icon/sort-button.svg");
-  background-repeat: no-repeat;
-  background-size: 11px 10px;
-  background-position: center;
+  width: 30px;
 }
 
-.sort-button-item:last-child .sort-button-item-link {
-  transform: rotate(180deg);
+.sort-button-item-link:hover .sort-button-item-svg{
+  fill: #808080;
 }
 
-.sort-button-item-link:hover {
-  opacity: .5;
-}
-
-.sort-button-item-link:active {
-  opacity: 1;
+.sort-button-item-link:active .sort-button-item-svg{
+  fill: #000000;
 }
 
 .sort-button-item-link:focus-visible {
   outline: 2px solid #AF4FFF;
 }
+
+.sort-button-item-svg {
+  padding: 10px 9.5px;
+}
+
+.sort-button-item:last-child .sort-button-item-link svg {
+  transform: rotate(180deg);
+}
+
 
 /*products*/
 
@@ -1656,35 +1667,6 @@ body {
                        "descr price";
 }
 
-.product-catalog-button {
-  visibility: hidden;
-  width: 220px;
-  height: 40px;
-  position: absolute;
-  top: 170px;
-  left: 70px;
-}
-
-.product-link:hover .product-img,
-.product-link:hover .product-name,
-.product-link:hover .product-price {
-  opacity: .6;
-}
-
-.product-link:hover .product-catalog-button {
-  visibility: visible;
-}
-
-.product-link:active .product-img,
-.product-link:active .product-name,
-.product-link:active .product-price {
-  opacity: .3;
-}
-
-.product-link:focus-visible {
-  outline: 2px solid #AF4FFF;
-}
-
 .product-img {
   display: block;
   grid-area: img;
@@ -1695,7 +1677,6 @@ body {
   font-weight: 700;
   font-size: 18px;
   letter-spacing: -0.02em;
-
 
   display: block;
   color: #000000;
@@ -1709,6 +1690,51 @@ body {
   text-align: end;
   grid-area: price;
   color: #000000;
+}
+
+.product-item-more-text {
+  width: 210px;
+  position: absolute;
+  top: 180px;
+  left: 75px;
+  z-index: 0;
+  visibility: hidden;
+}
+
+.product-item-more-text::after {
+  width: 220px;
+  height: 8px;
+  content: "";
+  position: absolute;
+  background-color: #FFE17F;
+  top: 6px;
+  left: -5px;
+  z-index: -1;
+}
+
+.product-item-new {
+  position: absolute;
+  top: 27px;
+  right: 27px;
+}
+
+.product-link:hover .product-img,
+.product-link:hover .product-name,
+.product-link:hover .product-price,
+.product-link:hover .product-item-new {
+  opacity: .6;
+}
+
+.product-link:hover .product-item-more-text {
+  visibility: visible;
+}
+
+.product-link:active .product-item-more-text::after{
+  background-color: #FFC700;
+}
+
+.product-link:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 .load-more {
