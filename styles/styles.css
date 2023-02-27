@@ -113,12 +113,6 @@ body {
   background-repeat: no-repeat;
   background-position: left 14px center;
 
-
-  background-image: url("../images/icon/search.svg");
-  background-repeat: no-repeat;
-  background-size: 16px 16px;
-  background-position: left 14px center;
-
   font-family: "Rubic", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -241,12 +235,31 @@ body {
 }
 
 .navigation-link-card {
-  padding-left: 25px;
+  padding-left: 43px;
+  position: relative;
 
   background-image: url("../images/icon/card.svg");
   background-repeat: no-repeat;
   background-size: 16px 14px;
-  background-position: center left -3px;
+  background-position: top 1.5px left 15px;
+}
+
+.card-counter {
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  padding: 2.5px 0;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .navigation-catalog {
@@ -312,7 +325,7 @@ body {
   width: calc(1040px - 293px);
   display: flex;
   justify-content: flex-end;
-  flex-wrap: wrap;
+  gap: 45px;
   margin: 0;
   margin-left: auto;
   padding: 0;
@@ -320,15 +333,13 @@ body {
 
 .menu-item {
   display: inline;
-}
 
-.menu-item:not(:last-child) .menu-item-link {
-  margin-right: 45px;
 }
 
 .menu-item-link {
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -351,9 +362,13 @@ body {
   outline: 2px solid #AF4FFF;
 }
 
-.menu-item-link-active {
-  text-decoration: underline;
-  text-underline-offset: 8px;
+.menu-item-link-active::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: auto;
+  top: 30px;
+  background-color: #000000;
 }
 
 .menu-item-link-active:hover {
@@ -1108,12 +1123,12 @@ body {
 }
 
 .subscribe-form {
-  position: relative;
+  display: inline-table;
 }
 
 .subscribe-field {
-  width: 557px;
-  height: 54px;
+  width: 541px;
+  height: 53px;
   padding: 0;
   padding-left: 16px;
   border: none;
@@ -1130,15 +1145,13 @@ body {
   opacity: 0.5;
 }
 
-.subscribe-field:focus-visible {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
+.subscribe-field:focus {
+  background-color: #DCDCDC;
+  outline: none;
 }
 
 .subscribe-button {
-  position: absolute;
-  left: 557px;
-  width: 247px;
+  width: 253px;
   height: 57px;
   background-color: inherit;
   border: 3px solid #C4C4C4;
@@ -1166,7 +1179,7 @@ body {
 
 .subscribe-free::before {
   position: absolute;
-  content: url("/..images/icon/check.svg");
+  content: url("../images/icon/check.svg");
   background-size: 14px 14px;
   background-repeat: no-repeat;
   left: -30.5px;
@@ -1302,12 +1315,12 @@ body {
   display: block;
 }
 
-.social-button:hover .social-button-svg-circle{
+.social-button:hover .social-button-svg-circle {
   fill: #FFC700;
   fill-opacity: 1;
 }
 
-.social-button:active .social-button-svg-element{
+.social-button:active .social-button-svg-element {
   opacity: .3;
 }
 
@@ -1609,11 +1622,11 @@ body {
   width: 30px;
 }
 
-.sort-button-item-link:hover .sort-button-item-svg{
+.sort-button-item-link:hover .sort-button-item-svg {
   fill: #808080;
 }
 
-.sort-button-item-link:active .sort-button-item-svg{
+.sort-button-item-link:active .sort-button-item-svg {
   fill: #000000;
 }
 
@@ -1729,7 +1742,7 @@ body {
   visibility: visible;
 }
 
-.product-link:active .product-item-more-text::after{
+.product-link:active .product-item-more-text::after {
   background-color: #FFC700;
 }
 
