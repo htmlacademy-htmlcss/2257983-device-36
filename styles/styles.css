@@ -323,7 +323,7 @@ body {
 }
 
 .header-subcatalog-list {
-  width: 1040px;
+  width: 1160px;
   min-height: 180px;
   margin: 0 auto;
   padding: 33px 60px 27px;
@@ -333,6 +333,7 @@ body {
   top: 32px;
   background-color: #FFE17F;
   visibility: hidden;
+  z-index: -1;
 
   display: flex;
   flex-wrap: wrap;
@@ -383,7 +384,7 @@ body {
 }
 
 .navigation-bottom-item-link-active {
-  padding-bottom: 3px;
+  padding-bottom: 2px;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
