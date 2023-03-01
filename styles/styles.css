@@ -264,6 +264,54 @@ body {
   top: 4.5px;
 }
 
+.basket-list {
+  width: 320px;
+  min-height: 307px;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #000000;
+
+  margin: 0;
+}
+
+.basket-item {
+  list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .navigation-bottom {
   width: 1040px;
   height: 50px;
@@ -365,6 +413,18 @@ body {
   color: #000000;
 }
 
+.header-subcatalog-link:hover {
+  opacity: .6;
+}
+
+.header-subcatalog-link:active {
+  opacity: .3;
+}
+
+.header-subcatalog-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
 .navigation-bottom-item:not(:first-child) .navigation-bottom-item-link:hover {
   opacity: .6;
 }
@@ -406,9 +466,11 @@ body {
   position: absolute;
   bottom: 0;
   left: 682px;
+  list-style: none;
 
   display: flex;
-  width: 76px;
+  flex-wrap: wrap;
+  min-width: 76px;
 
   justify-content: space-between;
   justify-items: center;
@@ -425,10 +487,14 @@ body {
 
 .slider-pagination-item-link {
   display: block;
-  height: 8px;
-  width: 8px;
+  border: none;
+  width: 12px;
+  height: 12px;
+  padding: 0;
   border: 2px solid #000000;
   border-radius: 50%;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 .slider-pagination-item-link:hover {
@@ -439,12 +505,10 @@ body {
   opacity: .3;
 }
 
-.slider-pagination-item-link:focus-visible {
-  outline: none;
-}
-
 .slider-pagination-item-link-active {
+  display: block;
   background-color: #000000;
+  outline: none;
 }
 
 .product-slider-background {
@@ -467,9 +531,9 @@ body {
 }
 
 .product-wrapper {
-  position: relative;
   width: 560px;
-  }
+  height: 560px;
+}
 
 .product-prev {
   position: absolute;
@@ -493,6 +557,12 @@ body {
   width: 20px;
 }
 
+.slider-arrow {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
 .slider-arrow:hover {
   opacity: .6;
 }
@@ -503,10 +573,6 @@ body {
 
 .slider-arrow:focus-visible {
   outline: 2px solid #AF4FFF;
-}
-
-.product-image {
-  max-width: 100%;
 }
 
 .description-wrapper {
