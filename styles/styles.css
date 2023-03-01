@@ -64,22 +64,22 @@ body {
 
 .header-logo-link {
   display: block;
-  background-image: url("../images/logo/device-logo.svg");
+  background-image: url("../images/logo/device-logo-header.svg");
   background-repeat: no-repeat;
   width: 146px;
   height: 36px;
   margin-bottom: 30px;
 }
 
-.header-logo-link:hover {
+.logo-link:hover {
   opacity: .6;
 }
 
-.header-logo-link:active {
+.logo-link:active {
   opacity: .3;
 }
 
-.header-logo-link:focus-visible {
+.logo-link:focus-visible {
   outline: 2px solid #AF4FFF;
 }
 
@@ -282,17 +282,6 @@ body {
   display: inline;
 }
 
-.navigation-bottom-item-link {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #000000;
-}
-
 .navigation-bottom-item:first-child {
   margin-right: auto;
 }
@@ -302,16 +291,23 @@ body {
   position: relative;
 }
 
-.navigation-bottom-item:first-child:hover .header-subcatalog-list {
-  visibility: visible;
-}
-
-.navigation-bottom-item:first-child:active .header-subcatalog-list {
-  visibility: visible;
-}
-
 .navigation-bottom-catalog:focus-visible {
   outline: 2px solid #AF4FFF;
+}
+
+.navigation-bottom-item:first-child:focus-within .header-subcatalog-list {
+  display: block;
+}
+
+.navigation-bottom-item-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
 }
 
 .navigation-bottom-item-svg {
@@ -332,15 +328,13 @@ body {
   left: -60px;
   top: 32px;
   background-color: #FFE17F;
-  visibility: hidden;
   z-index: -1;
-
-  display: flex;
-  flex-wrap: wrap;
+  display: none;
 }
 
 .header-subcatalog--item {
   list-style: none;
+  display: inline-flex;
 }
 
 .header-subcatalog--item:first-child {
@@ -763,22 +757,22 @@ body {
   z-index: -1;
 }
 
-.services-button-one:hover,
-.services-button-two:hover,
-.services-button-three:hover {
-  padding-left: 58.5px;
-  transition: .3s;
+.services-button-active {
+  box-sizing: content-box;
+  padding-right: 120px;
   color: #FFE17F;
+  background-color: #000000;
 }
 
-.services-button-one:hover::before,
-.services-button-two:hover::before,
-.services-button-three:hover::before {
-  height: 100%;
-  width: 280px;
-  top: 0%;
-  background-color: #000000;
-  transition: .1s;
+.services-button-active:hover {
+  width: 100px;
+  padding-left: 60px;
+  transition: 0.2s;
+}
+
+.services-button-active:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .services-button-one:focus-visible,
@@ -1229,12 +1223,12 @@ body {
 }
 
 .footer-logo-link {
-  width: fit-content;
+  content: "";
+  background-image: url("../images/logo/device-logo-footer.svg");
+  background-repeat: no-repeat;
+  width: 145px;
+  height: 36px;
   margin-bottom: 35px;
-}
-
-.footer-logo-link:focus-visible {
-  outline: 2px solid #AF4FFF;
 }
 
 .footer-address-text {
