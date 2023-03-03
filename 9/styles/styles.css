@@ -134,15 +134,19 @@ body {
 }
 
 .search-button {
-  position: absolute;
-  right: 0px;
   width: 160px;
   height: 40px;
-  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  right: 0px;
   border: 2px solid #000000;
   border-radius: 0 50px 50px 0;
   cursor: pointer;
   background-color: inherit;
+
+  font-family: "Rubic", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .search-button:hover {
@@ -169,22 +173,21 @@ body {
 }
 
 .header-login-item:first-child {
-  width: 146px;
+  min-width: 81px;
+  max-width: 146px;
   height: 30px;
   margin-right: 28px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.header-login-item:first-child:focus-within {
-  outline: 2px solid #AF4FFF;
 }
 
 .header-login-link {
-  padding: 4.2px 0 4.2px 27px;
+  padding-left: 27px;
   text-decoration: none;
   color: #000000;
+  display: block;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   background-image: url("../images/icon/login.svg");
   background-repeat: no-repeat;
@@ -235,10 +238,6 @@ body {
   display: inline;
 }
 
-.navigation-image {
-  margin-right: 12px;
-}
-
 .navigation-link {
   text-decoration: none;
   color: #000000;
@@ -258,6 +257,10 @@ body {
 
 .navigation-item:not(:last-child) {
   margin-right: 18px;
+}
+
+.navigation-item:last-child {
+  position: relative;
 }
 
 .navigation-link-compare {
@@ -300,6 +303,7 @@ body {
   width: 320px;
   min-height: 307px;
   position: absolute;
+  left: -123px;
   z-index: 2;
   background-color: #000000;
   display: none;
@@ -318,7 +322,6 @@ body {
   position: absolute;
   top: -5px;
   left: 153px;
-
 
   border-style: solid;
   border-width: 0 7px 6px 7px;
@@ -363,9 +366,6 @@ body {
 }
 
 .basket-item-img {
-  max-width: 39px;
-  height: 43px;
-
   margin-right: 23px;
 }
 
@@ -483,7 +483,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 45px;
+
 }
 
 .navigation-bottom-item {
@@ -516,6 +516,14 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+}
+
+.navigation-bottom-item:nth-child(2) {
+  margin-right: 43px;
+}
+
+.navigation-bottom-item:nth-child(3) {
+  margin-right: 45px;
 }
 
 .navigation-bottom-item-svg {
@@ -1016,13 +1024,12 @@ body {
 }
 
 .services-delivery-wrapper {
-  padding: 72.5px 63px 72.5px 116px;
-  padding-right: 246px;
+  padding: 72.5px 304px 72.5px 116px;
 
   background-image: url("../images/icon/courier.svg");
   background-repeat: no-repeat;
   background-size: 136px 164px;
-  background-position: center right 0;
+  background-position: center right 63px;
 }
 
 .services-garanty-wrapper {
@@ -1096,11 +1103,14 @@ body {
 
   background-image: url("../images/icon/delivery-car.svg");
   background-repeat: no-repeat;
-  background-size: 41px 40px;
+  background-size: 47px 31.1px;
   background-position: center;
 }
 
 .delivery-description {
+  margin: 0;
+  text-align: center;
+
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -1162,7 +1172,7 @@ body {
 
 .delivery-company-list {
   margin: 0;
-  margin-left: 17px;
+  margin-left: 22px;
   margin-bottom: 30px;
   padding: 0;
 }
@@ -1171,16 +1181,17 @@ body {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
+  padding-left: 14px;
   color: #000000;
 }
 
 .delivery-company-item:not(:last-child) {
-  margin-bottom: 19px;
+  margin-bottom: 17px;
 }
 
 .delivery-company-item::marker {
+  font-size: 1.4em;
   color: #FFC700;
-  margin-left: 30px;
 }
 
 .about-us-button {
@@ -1340,7 +1351,7 @@ body {
 .distribution-wrapper {
   width: 1160px;
   display: flex;
-  align-items: center;
+  align-items: end;
   padding: 64px 133px 144px 147px;
 }
 
@@ -1504,30 +1515,29 @@ body {
 }
 
 .footer-menu-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  margin: 0;
+
   text-decoration: none;
+  color: #FFFFFF;
 }
 
 .footer-menu-link:focus-visible {
   outline: 2px solid #AF4FFF;
 }
 
-.footer-menu-title {
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  display: inline;
-  color: #FFFFFF;
-}
-
-.footer-menu-title:hover {
+.footer-menu-link:hover {
   color: #FFC700;
   text-decoration: underline;
   text-underline-offset: 7px;
 }
 
-.footer-menu-title:active {
+.footer-menu-link:active {
   opacity: .3;
 }
 
@@ -1600,7 +1610,6 @@ body {
 
 .footer-academy-link {
   display: block;
-  margin-top: auto;
   margin-left: auto;
 }
 
