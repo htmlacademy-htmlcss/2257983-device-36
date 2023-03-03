@@ -160,31 +160,78 @@
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Стоимость</legend>
+
+
+
+
+                <div class="range-slider">
+
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0px; width: 119px; ">
+
+
+                      <button class="range-button range-button-min">
+                        <span class="visually-hidden">Изменить минимальную цену</span>
+                      </button>
+
+                      <button class="range-button range-button-max">
+                        <span class="visually-hidden">Изменить максимальную цену</span>
+                      </button>
+
+
+
+
+
+
+
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="range-input-wrapper">
+                    <label class="range-input-label" for="range-min">от
+                      <input class="range-input" id="range-min" type="number" name="min-cost" value="0">
+                    </label>
+                    <label class="range-input-label" for="range-max">до
+                      <input class="range-input" id="range-max" type="number" name="max-cost" value="5000">
+                    </label>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+
               </fieldset>
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Цвет</legend>
                 <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
+                  <li class="filter-check">
                     <label class="control">
                       <input class="control-input" type="checkbox" name="black" checked> Черный
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
+                  <li class="filter-check">
                     <label class="control">
                       <input class="control-input" type="checkbox" name="white" checked> Белый
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
+                  <li class="filter-check">
                     <label class="control">
                       <input class="control-input" type="checkbox" name="blue"> Синий
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
+                  <li class="filter-check">
                     <label class="control">
                       <input class="control-input" type="checkbox" name="red"> Красный
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
+                  <li class="filter-check">
                     <label class="control">
                       <input class="control-input" type="checkbox" name="pink"> Розовый
                     </label>
@@ -194,18 +241,19 @@
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Bluetooth</legend>
                 <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
+                  <li class="filter-radio">
                     <label class="control">
                       <input class="control-input" type="radio" name="bluetooth-group" value="yes" checked> Есть
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
+                  <li class="filter-radio">
                     <label class="control">
                       <input class="control-input" type="radio" name="bluetooth-group" value="no"> Нет
                     </label>
                   </li>
                 </ul>
               </fieldset>
+
               <button class="button filter-button" type="submit">Показать</button>
             </form>
           </div>
@@ -360,19 +408,13 @@
           <section class="footer-menu">
             <ul class="footer-menu-list">
               <li class="footer-menu-item">
-                <a class="footer-menu-link" href="">
-                  <h2 class="footer-menu-title">Доставка</h2>
-                </a>
+                <a class="footer-menu-link" href="#">Доставка</a>
               </li>
               <li class="footer-menu-item">
-                <a class="footer-menu-link" href="">
-                  <h2 class="footer-menu-title">Гарантия</h2>
-                </a>
+                <a class="footer-menu-link" href="#">Гарантия</a>
               </li>
               <li class="footer-menu-item">
-                <a class="footer-menu-link" href="">
-                  <h2 class="footer-menu-title">Контакты</h2>
-                </a>
+                <a class="footer-menu-link" href="#">Контакты</a>
               </li>
             </ul>
           </section>
