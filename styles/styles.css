@@ -1752,7 +1752,6 @@ body {
 }
 
 .delivery-input:focus-visible {
-  background-color: #4C4C4C;
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -1902,25 +1901,27 @@ body {
 }
 
 .delivery-counter-box {
-  box-sizing: border-box;
-  padding: 0;
   width: 60px;
   height: 60px;
+  box-sizing: border-box;
+  padding: 0;
   background-color: #F0F0F0;
   border: none;
 }
 
-.delivery-counter-box:focus-visible {
-  outline: 2px solid #AF4FFF;
-}
-
 .delivery-counter {
-  text-align: center;
-
   font-family: "Rubic", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+
+  text-align: center;
+}
+
+.delivery-counter::-webkit-outer-spin-button,
+.delivery-counter::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .delivery-counter-minus,
@@ -1929,7 +1930,7 @@ body {
   cursor: pointer;
 }
 
-.delivery-counter-minus:before {
+.delivery-counter-minus::before {
   content: "";
   display: block;
   position: absolute;
@@ -1940,7 +1941,7 @@ body {
   left: calc(50% - 8px);
 }
 
-.delivery-counter-plus:after {
+.delivery-counter-plus::after {
   content: "";
   display: block;
   position: absolute;
@@ -1952,7 +1953,7 @@ body {
   left: calc(50% - 8px);
 }
 
-.delivery-counter-plus:before {
+.delivery-counter-plus::before {
   content: "";
   display: block;
   position: absolute;
@@ -1965,12 +1966,24 @@ body {
 
 .delivery-counter-minus:hover,
 .delivery-counter-plus:hover {
-  background-color: #DCDCDC;
+  background-color: #EBEBEB;
 }
 
-.delivery-counter-minus:active,
-.delivery-counter-plus:active {
-  background-color: #4C4C4C;
+.delivery-counter-minus:hover::before,
+.delivery-counter-plus:hover::before,
+.delivery-counter-plus:hover::after {
+  background-color: #5E5E5E;
+}
+
+.delivery-counter-minus:active::before,
+.delivery-counter-plus:active::before,
+.delivery-counter-plus:active::after {
+  background-color: #A8A8A8;
+}
+
+.delivery-counter-minus:focus-visible,
+.delivery-counter-plus:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 .delivery-button-submit {
@@ -2005,6 +2018,8 @@ body {
 .delivery-button-submit:focus-visible {
   outline: 2px solid #AF4FFF;
 }
+
+
 
 
 
@@ -2190,18 +2205,6 @@ body {
   margin-bottom: 45px;
 }
 
-.control:hover {
-  opacity: .6;
-}
-
-.control:active {
-  opacity: .3;
-}
-
-.control-input:focus-visible {
-  outline: 2px solid #7B61FF;
-}
-
 .catalog-filter-title {
   padding: 0;
   margin-bottom: 20px;
@@ -2245,10 +2248,7 @@ body {
   border-radius: 50%;
   background-color: #EBEBEB;
   cursor: pointer;
-}
-
-.range-button-wrap {
-  position: absolute;
+  outline: none;
 }
 
 .range-button-min {
@@ -2270,40 +2270,52 @@ body {
   background-color: #000000;
 }
 
-.range-button-wrap {
-  outline: 2px solid ;
+.range-button:focus-visible:before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 24px;
+  width: 24px;
+  top: -4px;
+  bottom: 4px;
+  left: -4px;
+  right: 4px;
+  outline: 2px solid #AF4FFF;
 }
 
+.range-input-wrapper {
+  display: flex;
+}
 
+.range-input-label {
+  display: flex;
+  margin-right: 15px;
+}
 
+.range-input {
+  width: 50px;
+  padding: 0 3px;
+  font: inherit;
+  text-align: left;
+  background-color: inherit;
+  border: none;
+  appearance: textfield;
+}
 
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
 
+.range-input {
+  outline: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.range-input-label:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
 
 .catalog-filter-list {
   padding: 0;
@@ -2318,6 +2330,73 @@ body {
 .filter-radio:not(:last-child) {
   margin-bottom: 20px;
 }
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.control:hover {
+  opacity: .6;
+}
+
+.control:active {
+  opacity: .3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+
+  content: "";
+  width: 10px;
+  height: 10px;
+  mask: url("../images/icon/check.svg");
+  -webkit-mask: url("../images/icon/check.svg");
+  background-color: #000000;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
