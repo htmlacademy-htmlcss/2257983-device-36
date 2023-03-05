@@ -1443,6 +1443,21 @@ body {
 
 /*Футер*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .main-footer {
   background-color: #444444;
   color: #FFFFFF;
@@ -1626,8 +1641,31 @@ body {
   opacity: .3;
 }
 
-/*Модальное окно*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Модальное окно*/
 .modal-container {
   position: fixed;
   top: 0;
@@ -1637,7 +1675,7 @@ body {
   height: 100%;
   background-color: rgba(248, 246, 246, 0.8);
   z-index: 3;
-  display: none;
+
 }
 
 .modal-delivery {
@@ -1651,6 +1689,7 @@ body {
   padding: 62px 70px;
 }
 
+/*Модальное окно. 1-ая строка*/
 .modal-delivery-header {
   width: 760px;
   margin-bottom: 42px;
@@ -1661,19 +1700,17 @@ body {
 }
 
 .modal-delivery-title {
-  margin: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
+
+  margin: 0;
   color: #000000;
 }
 
+/*Модальное окно. Кнопка выход*/
 .delivery-esc-button {
-  width: fit-content;
   width: 26px;
   height: 26px;
   background-color: inherit;
@@ -1699,6 +1736,7 @@ body {
   outline-offset: 2px;
 }
 
+/*Модальное окно. 2 строка*/
 .delivery-name-email {
   width: 760px;
   margin-bottom: 42px;
@@ -1741,6 +1779,48 @@ body {
   color: #A8A8A8;
 }
 
+.delivery-label-name,
+.delivery-label-email {
+  position: relative;
+}
+
+.delivery-label-name::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 58px;
+  left: 326px;
+  width: 13px;
+  height: 12px;
+
+  -webkit-mask: url("../images/icon/login.svg");
+  mask: url("../images/icon/login.svg");
+  background-size: 13px 12px;
+  background-repeat: no-repeat;
+  background-color: #B3B3B3;
+}
+
+.delivery-label-email::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 58px;
+  left: 326px;
+  width: 15px;
+  height: 12px;
+
+  background-image: url("../images/icon/e-mail.svg");
+  background-repeat: no-repeat;
+  background-size: 15px 12px;
+}
+
+.delivery-signature {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/*Модальное окно. Эффекты инпут*/
 .delivery-input:hover {
   background-color: #DCDCDC;
 }
@@ -1758,61 +1838,19 @@ body {
   color: #353535;
 }
 
-.delivery-label-name {
-  position: relative;
-}
-
-.delivery-label-name::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 13px;
-  height: 12px;
-  top: 58px;
-  left: 326px;
-
-  -webkit-mask: url("../images/icon/login.svg");
-  mask: url("../images/icon/login.svg");
-  background-size: 13px 12px;
-  background-repeat: no-repeat;
-  background-color: #B3B3B3;
-}
-
-.delivery-label-email {
-  position: relative;
-}
-
-.delivery-label-email::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 15px;
-  height: 12px;
-  top: 58px;
-  left: 326px;
-
-  background-image: url("../images/icon/e-mail.svg");
-  background-repeat: no-repeat;
-  background-size: 15px 12px;
-}
-
-.delivery-email-border-error {
+.delivery-input:invalid {
   border: 2px solid #FF3D3D;
 }
 
-.delivery-signature {
-  margin: 0;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.delivery-mail-error {
+.delivery-input:invalid + .delivery-signature {
   color: #FF3D3D;
 }
 
+/*Модальное окно. 3 строка*/
 .delivery-product {
   display: flex;
   gap: 40px;
+
   margin-bottom: 42px;
 }
 
@@ -1833,14 +1871,23 @@ body {
   position: relative;
 }
 
+/*Модальное окно. Тултип*/
+.tooltip {
+  position: absolute;
+  top: -2px;
+  left: 121px;
+  width: 26px;
+  height: 26px;
+}
+
 .tooltip-button {
   width: 26px;
   height: 26px;
   border: none;
   border-radius: 50%;
   position: absolute;
-  margin-top: -2px;
-  margin-left: 8px;
+  margin-top: 0px;
+  margin-left: 0px;
   background-color: #FFE17F;
   cursor: pointer;
 }
@@ -1861,14 +1908,15 @@ body {
 .tooltip-text {
   font-weight: 400;
   font-size: 16px;
+  line-height: 20px;
 
   width: 200px;
-  height: 160px;
+  min-height: 160px;
   display: block;
   position: absolute;
-  z-index: 3;
-  top: 30px;
-  left: -15px;
+  z-index: 4;
+  top: 36px;
+  left: -135px;
   box-sizing: border-box;
   padding: 19px 17px;
   color: #FFFFFF;
@@ -1888,7 +1936,9 @@ body {
   border-color: transparent transparent #000000 transparent;
 }
 
-.delivery-label-counter:hover .tooltip-text {
+/*Модальное окно. Тултип. Эффекты*/
+.tooltip:hover .tooltip-text,
+.tooltip:active .tooltip-text {
   display: block;
 }
 
@@ -1896,7 +1946,11 @@ body {
   outline: none;
 }
 
-.tooltip-button:focus-visible:before {
+.tooltip:focus-within .tooltip-text {
+  display: block;
+}
+
+.tooltip-button:focus-visible::before {
   content: "";
   display: block;
   position: absolute;
@@ -1907,16 +1961,9 @@ body {
   outline: 2px solid #AF4FFF;
 }
 
-.delivery-label-counter:focus-within .tooltip-text {
-  display: block;
-}
-
+/*Модальное окно. 3 строка. Счетчик товара*/
 .delivery-counter-bottom {
   display: flex;
-}
-
-.delivery-counter-bottom-error {
-  border: 2px solid #FF3D3D;
 }
 
 .delivery-counter-box {
@@ -1976,8 +2023,8 @@ body {
   transform: rotate(90deg);
 }
 
-.delivery-counter-minus:hover,
-.delivery-counter-plus:hover {
+/*Модальное окно. 3 строка. Счетчик товара. Эффекты*/
+.delivery-counter-box:hover {
   background-color: #EBEBEB;
 }
 
@@ -1993,11 +2040,11 @@ body {
   background-color: #A8A8A8;
 }
 
-.delivery-counter-minus:focus-visible,
-.delivery-counter-plus:focus-visible {
+.delivery-counter-box:focus-visible {
   outline: 2px solid #AF4FFF;
 }
 
+/*Модальное окно. Кнопка отправить*/
 .delivery-button-submit {
   width: 200px;
   height: 40px;
@@ -2017,6 +2064,7 @@ body {
   z-index: -1;
 }
 
+/*Модальное окно. Кнопка отправить. Эффекты*/
 .delivery-button-submit:hover::before {
   height: 100%;
   top: 0%;
@@ -2031,7 +2079,7 @@ body {
   outline: 2px solid #AF4FFF;
 }
 
-/*catalog.html*/
+/*2 страница. Каталог*/
 
 .main-header {
   position: relative;
@@ -2216,13 +2264,13 @@ body {
   position: relative;
   height: 2px;
   margin-bottom: 11px;
-  background-color: #242424;
+  background-color: #DCDCDC;
 }
 
 .range-bar {
   position: absolute;
   height: 2px;
-  background-color: #DCDCDC;
+  background-color: #242424;
 }
 
 .range-button {

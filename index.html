@@ -360,22 +360,19 @@
               мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </div>
 
-<!--
-          <div class="services-garanty-wrapper">
+          <div class="services-garanty-wrapper visually-hidden">
             <h3 class="services-title">Гарантия</h3>
               <p class="services-description">Если из-за возгорания купленного у нас товара у вас
               сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.</p>
           </div>
 
-          <div class="services-credit-wrapper">
+          <div class="services-credit-wrapper visually-hidden">
             <h3 class="services-title">Кредит</h3>
             <p class="services-description">Залезть в долговую яму стало проще! Кредитные
               консультанты подберут для вас наиболее выгодные
               условия кредита. Выгодные для банка, разумеется.</p>
           </div>
--->
-
         </div>
       </section>
 
@@ -575,20 +572,20 @@
         <div class="delivery-name-email">
           <form class="delivery-form-header" action="https://echo.htmlacademy.ru/" method="post">
             <label class="delivery-label delivery-label-name" for="name">Ваше имя:</label>
-            <input class="delivery-input" type="text" id="name" name="name" placeholder="Введите имя">
+            <input class="delivery-input" type="text" id="name" name="name" placeholder="Введите имя" minlength="3" required>
             <p class="delivery-signature">Добавьте имя</p>
           </form>
           <form class="delivery-form-header" action="https://echo.htmlacademy.ru/" method="post">
             <label class="delivery-label delivery-label-email" for="e-mail">Ваш e-mail:</label>
-            <input class="delivery-input delivery-email-border-error" type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail">
-            <p class="delivery-signature delivery-mail-error">Забавный у вас адрес</p>
+            <input class="delivery-input" type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail" required>
+            <p class="delivery-signature">Забавный у вас адрес</p>
           </form>
         </div>
 
         <div class="delivery-product">
           <form class="delivery-form-bottom" action="https://echo.htmlacademy.ru/" method="post">
             <label class="delivery-label" for="delivery--product">Что нужно привезти:</label>
-            <input class="delivery-input delivery-input-what" type="text" id="delivery--product" name="delivery--product" placeholder="В свободной форме">
+            <input class="delivery-input" type="text" id="delivery--product" name="delivery--product" placeholder="В свободной форме" minlength="5" required>
           </form>
           <div class="product-counter-wrapper">
             <form class="delivery-form-counter" action="https://echo.htmlacademy.ru/" method="post">
@@ -600,16 +597,16 @@
                   </span>
               </span>
 
-              <div class="delivery-counter-bottom delivery-counter-bottom-error">
+              <div class="delivery-counter-bottom">
                 <button class="delivery-counter-box delivery-counter-minus" type="button"><span class="visually-hidden">Минус один</span></button>
-                <input class="delivery-counter-box delivery-counter" type="number" id="product-counter" value="1">
+                <input class="delivery-counter-box delivery-counter" type="number" id="product-counter" value="1" min="1">
                 <button class="delivery-counter-box delivery-counter-plus" type="button"><span class="visually-hidden">Плюс один</span></button>
               </div>
             </form>
           </div>
         </div>
 
-        <button class="button delivery-button-submit">Отправить</button>
+        <button class="button delivery-button-submit" type="submit">Отправить</button>
 
       </div>
     </div>
