@@ -65,6 +65,7 @@ body {
 .header-logo-link {
   display: block;
   background-image: url("../images/logo/device-logo-header.svg");
+  background-size: 145px 36px;
   background-repeat: no-repeat;
   width: 146px;
   height: 36px;
@@ -98,11 +99,6 @@ body {
   height: 40px;
 }
 
-.search-form-label:focus-within {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
-}
-
 .search-field {
   width: 359px;
   height: 40px;
@@ -131,6 +127,15 @@ body {
 
 .search-field:focus-visible {
   outline: none;
+}
+
+.search-field:disabled {
+  opacity: .1;
+}
+
+.search-form-label:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .search-button {
@@ -310,12 +315,9 @@ body {
 }
 
 /* Закрытая корзина, будет открываться при клике
-
 .basket-open {
   display: block;
-}
-
-*/
+}*/
 
 .basket::before {
   content: "";
@@ -1406,6 +1408,14 @@ body {
   outline: none;
 }
 
+.subscribe-field:invalid {
+  border-bottom: 3px solid #FF3D3D;
+}
+
+.subscribe-field:disabled {
+  opacity: .1;
+}
+
 .subscribe-button {
   width: 253px;
   height: 57px;
@@ -1428,6 +1438,10 @@ body {
   outline-offset: 2px;
 }
 
+.subscribe-button:disabled {
+  opacity: .3;
+}
+
 .subscribe-free {
   margin-left: auto;
   position: relative;
@@ -1442,21 +1456,6 @@ body {
 }
 
 /*Футер*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .main-footer {
   background-color: #444444;
@@ -1641,30 +1640,6 @@ body {
   opacity: .3;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Модальное окно*/
 .modal-container {
   position: fixed;
@@ -1675,7 +1650,7 @@ body {
   height: 100%;
   background-color: rgba(248, 246, 246, 0.8);
   z-index: 3;
-
+  display: none;
 }
 
 .modal-delivery {
@@ -1846,6 +1821,10 @@ body {
   color: #FF3D3D;
 }
 
+.delivery-input:disabled {
+  opacity: .3;
+}
+
 /*Модальное окно. 3 строка*/
 .delivery-product {
   display: flex;
@@ -1964,6 +1943,7 @@ body {
 /*Модальное окно. 3 строка. Счетчик товара*/
 .delivery-counter-bottom {
   display: flex;
+  box-sizing: border-box;
 }
 
 .delivery-counter-box {
@@ -2040,8 +2020,21 @@ body {
   background-color: #A8A8A8;
 }
 
+.delivery-counter-minus:disabled,
+.delivery-counter-plus:disabled {
+  opacity: .3;
+}
+
 .delivery-counter-box:focus-visible {
   outline: 2px solid #AF4FFF;
+}
+
+.delivery-counter-box:disabled {
+  opacity: .3;
+}
+
+.counter-error {
+  outline: 2px solid #FF3D3D;
 }
 
 /*Модальное окно. Кнопка отправить*/
@@ -2538,6 +2531,10 @@ body {
   outline: 2px solid #AF4FFF;
 }
 
+.select-control:disabled {
+  opacity: .1;
+}
+
 .sort-button-list {
   padding: 0;
   margin: 0;
@@ -2547,35 +2544,42 @@ body {
 
 .sort-button-item {
   list-style: none;
+
 }
 
 .sort-button-item-link {
   display: block;
+  position: relative;
   box-sizing: border-box;
   height: 30px;
   width: 30px;
 }
 
-.sort-button-item-link:hover .sort-button-item-svg {
-  fill: #808080;
+.sort-button-item-link::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 9.5px;
+  border-style: solid;
+  border-width: 0 5.5px 10px 5.5px;
+  border-color: transparent transparent #C0C0C0 transparent;
 }
 
-.sort-button-item-link:active .sort-button-item-svg {
-  fill: #000000;
+.sort-button-item:last-child {
+  transform: rotate(180deg);
+}
+
+.sort-button-item-link:hover::after {
+  border-color: transparent transparent #808080 transparent;
+}
+
+.sort-button-item-link:active::after {
+  border-color: transparent transparent #000000 transparent;
 }
 
 .sort-button-item-link:focus-visible {
   outline: 2px solid #AF4FFF;
 }
-
-.sort-button-item-svg {
-  padding: 10px 9.5px;
-}
-
-.sort-button-item:last-child .sort-button-item-link svg {
-  transform: rotate(180deg);
-}
-
 
 /*products*/
 
@@ -2704,6 +2708,10 @@ body {
 .load-more:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
+}
+
+.load-more:disabled {
+  opacity: .3;
 }
 
 /*pagination-list*/
