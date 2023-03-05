@@ -64,12 +64,12 @@ body {
 
 .header-logo-link {
   display: block;
-  background-image: url("../images/logo/device-logo-header.svg");
-  background-size: 145px 36px;
-  background-repeat: no-repeat;
-  width: 146px;
-  height: 36px;
+  width: fit-content;
   margin-bottom: 30px;
+}
+
+.logo-svg {
+  display: block;
 }
 
 .logo-link:hover {
@@ -1478,11 +1478,8 @@ body {
 }
 
 .footer-logo-link {
-  content: "";
-  background-image: url("../images/logo/device-logo-footer.svg");
-  background-repeat: no-repeat;
-  width: 145px;
-  height: 36px;
+  display: block;
+  width: fit-content;
   margin-bottom: 35px;
 }
 

@@ -4,13 +4,22 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
   </head>
 
   <body>
 
     <header class="main-header">
       <h1 class="visually-hidden">Магазин Device</h1>
-      <a class="logo-link header-logo-link" href="index.html"></a>
+      <a class="logo-link header-logo-link" href="index.html">
+        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="145" height="36" viewBox="0 0 145 36" fill="#000000">
+          <path fill="#000" d="M27.22 0v35.3h-7.6v-2.4c-1.7 1.9-4.1 3.1-7.51 3.1C5.5 36 0 30.2 0 22.7 0 15.2 5.5 9.4 12.1 9.4c3.41 0 5.91 1.2 7.51 3.1V0h7.6Zm-7.6 22.7c0-3.8-2.5-6.2-6.01-6.2-3.5 0-6 2.4-6 6.2 0 3.8 2.5 6.2 6 6.2 3.5-.1 6-2.4 6-6.2ZM43.73 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.6 0-14.01-5.8-14.01-13.3 0-7.5 5.4-13.3 13.4-13.3 7.41 0 12.82 5.7 12.82 13.3 0 1.1-.1 2.1-.3 3H37.63c1 2.6 3.3 3.5 6.1 3.5Zm4.6-9.1c-.8-2.9-3.1-4-5.4-4-2.9 0-4.8 1.4-5.5 4h10.9ZM82.16 10.1l-9.31 25.2h-8.6l-9.31-25.2h8.4l5.3 16 5.31-16h8.2ZM83.46 10.1h7.6v25.2h-7.6V10.1ZM93.67 22.7c0-7.5 5.7-13.3 13.4-13.3 4.9 0 9.21 2.6 11.41 6.5l-6.6 3.8c-.9-1.8-2.7-2.8-4.9-2.8-3.3 0-5.71 2.4-5.71 5.8 0 3.5 2.4 5.8 5.7 5.8 2.2 0 4.1-1.1 4.9-2.8l6.61 3.8c-2.1 3.9-6.4 6.5-11.4 6.5-7.71 0-13.41-5.8-13.41-13.3ZM132.9 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.61 0-14.02-5.8-14.02-13.3 0-7.5 5.5-13.3 13.41-13.3 7.4 0 12.81 5.7 12.81 13.3 0 1.1-.1 2.1-.3 3h-17.91c1 2.6 3.3 3.5 6.1 3.5Zm4.7-9.1c-.8-2.9-3.1-4-5.4-4-2.91 0-4.81 1.4-5.51 4h10.9Z"/>
+          <path fill="#510094" d="M83.46 0v10.1L91.06 0h-7.6Z"/>
+          role="img"
+          aria-label="Магазин "Device""
+        </svg>
+      </a>
 
       <nav class="navigation">
         <div class="navigation-user">
@@ -29,7 +38,7 @@
               <a class="header-login-link" href="#">Коля Петухов</a>
             </li>
             <li class="header-login-item header-navigation">
-              <button class="header-login-logout">Выйти</button>
+              <button class="header-login-logout" type="button">Выйти</button>
             </li>
           </ul>
 
@@ -51,21 +60,21 @@
                       <img class="basket-item-img" src="images/products/product-1.jpg" alt="Любительская селфи-палка">
                       <p class="basket-item-name">Любительская селфи-палка</p>
                     </a>
-                    <button class="basket-esc-button"><span class="visually-hidden">Закрыть</span></button>
+                    <button class="basket-esc-button" type="button"><span class="visually-hidden">Закрыть</span></button>
                   </li>
                   <li class="basket-item">
                     <a class="basket-item-link" href="#">
                       <img class="basket-item-img" src="images/products/product-2.jpg" alt="Профессиональная селфи-палка">
                       <p class="basket-item-name">Профессиональная селфи-палка</p>
                     </a>
-                    <button class="basket-esc-button"><span class="visually-hidden">Закрыть</span></button>
+                    <button class="basket-esc-button" type="button"><span class="visually-hidden">Закрыть</span></button>
                   </li>
                 </ul>
                 <div class="basket-item-counter-price">
                   <span class="basket-item-counter">Товаров: 2</span>
                   <span class="basket-item-price">Сумма: 2000 ₽</span>
                 </div>
-                <button class="basket-open-button">Открыть корзину</button>
+                <button class="basket-open-button" type="button">Открыть корзину</button>
               </div>
             </li>
           </ul>
@@ -164,10 +173,10 @@
                 <div class="range-slider">
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0px; width: 119px;">
-                      <button class="range-button range-button-min">
+                      <button class="range-button range-button-min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену</span>
                       </button>
-                      <button class="range-button range-button-max">
+                      <button class="range-button range-button-max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену</span>
                       </button>
                     </div>
@@ -243,7 +252,7 @@
                 </ul>
               </fieldset>
 
-              <button class="button filter-button" type="submit">Показать</button>
+              <button class="button filter-button" type="button">Показать</button>
             </form>
           </div>
 
@@ -284,7 +293,7 @@
                         селфи-палка</b>
                       <span class="product-price">500 ₽</span>
                       <span class="button product-item-more-text">Подробнее</span>
-                      <svg class="product-item-new" width="60" height="60" fill="none">
+                      <svg class="product-item-new" width="60" height="60" viewBox="0 0 60 60" fill="none">
                         <circle cx="30" cy="30" r="29" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
                         <path fill="#000" fill-opacity=".6" d="M13.56 28.32V34h-2.3v-9.94h1.83l4.6 5.85v-5.85H20V34H18.1l-4.55-5.68Zm18.12 3.66V34h-6.99v-9.94h6.86v2.02h-4.56V28h3.92v1.86h-3.92v2.11h4.69Zm7.47-7.9h2.11l1.04 3.17 1.03-3.18h2.13l-1.7 4.62 1.02 2.65 2.49-7.28h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.86-9.94h2.49l2.5 7.28.98-2.65-1.66-4.62Z"/>
                       </svg>
@@ -297,7 +306,7 @@
                         селфи-палка</b>
                       <span class="product-price">1 500 ₽</span>
                       <span class="button product-item-more-text">Подробнее</span>
-                      <svg class="product-item-new" width="60" height="60" fill="none">
+                      <svg class="product-item-new" width="60" height="60" viewBox="0 0 60 60" fill="none">
                         <circle cx="30" cy="30" r="29" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
                         <path fill="#000" fill-opacity=".6" d="M13.56 28.32V34h-2.3v-9.94h1.83l4.6 5.85v-5.85H20V34H18.1l-4.55-5.68Zm18.12 3.66V34h-6.99v-9.94h6.86v2.02h-4.56V28h3.92v1.86h-3.92v2.11h4.69Zm7.47-7.9h2.11l1.04 3.17 1.03-3.18h2.13l-1.7 4.62 1.02 2.65 2.49-7.28h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.86-9.94h2.49l2.5 7.28.98-2.65-1.66-4.62Z"/>
                       </svg>
@@ -310,7 +319,7 @@
                         селфи-палка</b>
                       <span class="product-price">2 500 ₽</span>
                       <span class="button product-item-more-text">Подробнее</span>
-                      <svg class="product-item-new" width="60" height="60" fill="none">
+                      <svg class="product-item-new" width="60" height="60" viewBox="0 0 60 60" fill="none">
                         <circle cx="30" cy="30" r="29" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
                         <path fill="#000" fill-opacity=".6" d="M13.56 28.32V34h-2.3v-9.94h1.83l4.6 5.85v-5.85H20V34H18.1l-4.55-5.68Zm18.12 3.66V34h-6.99v-9.94h6.86v2.02h-4.56V28h3.92v1.86h-3.92v2.11h4.69Zm7.47-7.9h2.11l1.04 3.17 1.03-3.18h2.13l-1.7 4.62 1.02 2.65 2.49-7.28h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.86-9.94h2.49l2.5 7.28.98-2.65-1.66-4.62Z"/>
                       </svg>
@@ -324,7 +333,7 @@
                       </b>
                       <span class="product-price">1 500 ₽</span>
                       <span class="button product-item-more-text">Подробнее</span>
-                      <svg class="product-item-new" width="60" height="60" fill="none">
+                      <svg class="product-item-new" width="60" height="60" viewBox="0 0 60 60" fill="none">
                         <circle cx="30" cy="30" r="29" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
                         <path fill="#000" fill-opacity=".6" d="M13.56 28.32V34h-2.3v-9.94h1.83l4.6 5.85v-5.85H20V34H18.1l-4.55-5.68Zm18.12 3.66V34h-6.99v-9.94h6.86v2.02h-4.56V28h3.92v1.86h-3.92v2.11h4.69Zm7.47-7.9h2.11l1.04 3.17 1.03-3.18h2.13l-1.7 4.62 1.02 2.65 2.49-7.28h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.86-9.94h2.49l2.5 7.28.98-2.65-1.66-4.62Z"/>
                       </svg>
@@ -378,7 +387,14 @@
       <div class="footer-wrapper">
         <div class="footer-logo-address-line">
           <h2 class="visually-hidden">Магазин Device</h2>
-          <a class="logo-link footer-logo-link" href="index.html"></a>
+          <a class="logo-link footer-logo-link" href="index.html">
+            <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="145" height="36" viewBox="0 0 145 36" fill="#FFC700">
+              <path fill="#FFC700" d="M27.22 0v35.3h-7.6v-2.4c-1.7 1.9-4.1 3.1-7.51 3.1C5.5 36 0 30.2 0 22.7 0 15.2 5.5 9.4 12.1 9.4c3.41 0 5.91 1.2 7.51 3.1V0h7.6Zm-7.6 22.7c0-3.8-2.5-6.2-6.01-6.2-3.5 0-6 2.4-6 6.2 0 3.8 2.5 6.2 6 6.2 3.5-.1 6-2.4 6-6.2ZM43.73 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.6 0-14.01-5.8-14.01-13.3 0-7.5 5.4-13.3 13.4-13.3 7.41 0 12.82 5.7 12.82 13.3 0 1.1-.1 2.1-.3 3H37.63c1 2.6 3.3 3.5 6.1 3.5Zm4.6-9.1c-.8-2.9-3.1-4-5.4-4-2.9 0-4.8 1.4-5.5 4h10.9ZM82.16 10.1l-9.31 25.2h-8.6l-9.31-25.2h8.4l5.3 16 5.31-16h8.2ZM83.46 10.1h7.6v25.2h-7.6V10.1ZM93.67 22.7c0-7.5 5.7-13.3 13.4-13.3 4.9 0 9.21 2.6 11.41 6.5l-6.6 3.8c-.9-1.8-2.7-2.8-4.9-2.8-3.3 0-5.71 2.4-5.71 5.8 0 3.5 2.4 5.8 5.7 5.8 2.2 0 4.1-1.1 4.9-2.8l6.61 3.8c-2.1 3.9-6.4 6.5-11.4 6.5-7.71 0-13.41-5.8-13.41-13.3ZM132.9 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.61 0-14.02-5.8-14.02-13.3 0-7.5 5.5-13.3 13.41-13.3 7.4 0 12.81 5.7 12.81 13.3 0 1.1-.1 2.1-.3 3h-17.91c1 2.6 3.3 3.5 6.1 3.5Zm4.7-9.1c-.8-2.9-3.1-4-5.4-4-2.91 0-4.81 1.4-5.51 4h10.9Z"/>
+              <path fill="#FFC700" d="M83.46 0v10.1L91.06 0h-7.6Z"/>
+              role="img"
+              aria-label="Магазин "Device""
+            </svg>
+          </a>
 
           <section class="footer-address">
             <h2 class="visually-hidden">Адрес</h2>
