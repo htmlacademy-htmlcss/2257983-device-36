@@ -48,14 +48,14 @@
                 <ul class="basket-list">
                   <li class="basket-item">
                     <a class="basket-item-link" href="#">
-                      <img class="basket-item-img" src="images/products/product-1.jpg" width="39px" height="43px" alt="Любительская селфи-палка">
+                      <img class="basket-item-img" src="images/products/product-1.jpg" width="39" height="43" alt="Любительская селфи-палка">
                       <p class="basket-item-name">Любительская селфи-палка</p>
                     </a>
                     <button class="basket-esc-button"><span class="visually-hidden">Закрыть</span></button>
                   </li>
                   <li class="basket-item">
                     <a class="basket-item-link" href="#">
-                      <img class="basket-item-img" src="images/products/product-2.jpg" width="39px" height="43px" alt="Профессиональная селфи-палка">
+                      <img class="basket-item-img" src="images/products/product-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка">
                       <p class="basket-item-name">Профессиональная селфи-палка</p>
                     </a>
                     <button class="basket-esc-button"><span class="visually-hidden">Закрыть</span></button>
@@ -487,6 +487,7 @@
 
         <div class="footer-menu-social">
           <section class="footer-menu">
+            <h2 class="visually-hidden">Сервисы</h2>
             <ul class="footer-menu-list">
               <li class="footer-menu-item">
                 <a class="footer-menu-link" href="#">Доставка</a>
@@ -586,29 +587,31 @@
         </div>
 
         <div class="delivery-product">
-
           <form class="delivery-form-bottom" action="https://echo.htmlacademy.ru/" method="post">
             <label class="delivery-label" for="delivery--product">Что нужно привезти:</label>
             <input class="delivery-input delivery-input-what" type="text" id="delivery--product" name="delivery--product" placeholder="В свободной форме">
           </form>
           <div class="product-counter-wrapper">
             <form class="delivery-form-counter" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="delivery-label delivery-label-counter" for="product-counter">Количество:
-                <a class="counter-info" href="#"><span class="visually-hidden">Информация по количеству</span>
-                <div class="counter--info">
-                  <p class="counter---info">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</p>
-                </div>
-                </a>
-              </label>
+              <span class="delivery-label-counter">
+                <label class="delivery-label delivery-label-counter" for="product-counter">Количество:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-button" type="button" aria-labelledby="tooltip-label-counter"></button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-counter">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+                  </span>
+              </span>
+
               <div class="delivery-counter-bottom delivery-counter-bottom-error">
                 <button class="delivery-counter-box delivery-counter-minus" type="button"><span class="visually-hidden">Минус один</span></button>
-                <input class="delivery-counter-box delivery-counter" type="text" id="product-counter" value="1">
+                <input class="delivery-counter-box delivery-counter" type="number" id="product-counter" value="1">
                 <button class="delivery-counter-box delivery-counter-plus" type="button"><span class="visually-hidden">Плюс один</span></button>
               </div>
             </form>
           </div>
         </div>
+
         <button class="button delivery-button-submit">Отправить</button>
+
       </div>
     </div>
 
