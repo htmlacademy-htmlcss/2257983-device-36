@@ -1626,7 +1626,7 @@ img {
   left: 0;
 }
 
-/*.footer-address-text::after {
+.footer-address-text::after {
   position: absolute;
   display: block;
   content: "";
@@ -1634,7 +1634,7 @@ img {
   height: 7px;
   background-color: #FFC700;
   top: 104px;
-}*/
+}
 
 .footer-menu-social {
   width: 444px;
