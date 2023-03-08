@@ -339,18 +339,18 @@ img {
 
   position: absolute;
   left: 0;
-  top: 9.5px;
+  top: 9.5px;п
 }
 
 .basket {
   width: 320px;
   min-height: 301px;
   position: absolute;
-  top: 35px;
+  top: 40px;
   left: -126px;
   z-index: 2;
   background-color: #000000;
-
+  display: none;
 }
 
 /* Закрытая корзина, будет открываться при клике
@@ -468,15 +468,13 @@ img {
 
 .basket-item-counter-price {
   width: 100%;
-  box-sizing: border-box;
-  padding: 0 20px;
   background-color: #1a1a1a;
+  box-sizing: border-box;
+  padding: 12px 20px;
 
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
-  box-sizing: border-box;
-  padding: 0 20px;
 
   display: flex;
   align-items: center;
@@ -486,7 +484,7 @@ img {
 .basket-open-button {
   width: 280px;
   border: none;
-  padding: 14.5px 25px;
+  padding: 14.5px 23px;
   margin: 20px;
   cursor: pointer;
   background-color: #FFFFFF;
@@ -1021,7 +1019,7 @@ img {
   position: absolute;
 
   width: 1440px;
-  height: 289px;
+  height: 100%;
   top: 102px;
   left: -140px;
   background-color: #F0F0F0;
@@ -1590,6 +1588,7 @@ img {
 .footer-wrapper {
   width: 1160px;
   margin: 0 auto;
+  position: relative;
 
   display: flex;
 }
@@ -1616,7 +1615,18 @@ img {
   margin: 0;
 }
 
-.footer-address-text::after {
+.footer-wrapper::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 80px;
+  height: 7px;
+  background-color: #FFC700;
+  bottom:77px;
+  left: 0;
+}
+
+/*.footer-address-text::after {
   position: absolute;
   display: block;
   content: "";
@@ -1624,7 +1634,7 @@ img {
   height: 7px;
   background-color: #FFC700;
   top: 104px;
-}
+}*/
 
 .footer-menu-social {
   width: 444px;
@@ -1645,6 +1655,8 @@ img {
   padding: 0;
 
   display: flex;
+  gap: 10px 30px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -1804,7 +1816,7 @@ img {
   height: 100%;
   background-color: rgba(248, 246, 246, 0.8);
   z-index: 3;
-
+  display: none;
 }
 
 .modal-delivery {
@@ -2637,16 +2649,20 @@ img {
   width: 141px;
   height: 30px;
   margin-right: auto;
+  padding: 0;
+  border: none;
+  cursor: pointer;
 
   font-family: "Rubic", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
 
-
   appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   background-color: inherit;
-  background-image: url(../images/icon/breadscrumb-arrow.svg);
+  background-image: url("../images/icon/breadscrumb-arrow.svg");
   background-repeat: no-repeat;
   background-size: 9px 6px;
   background-position: right 10px top 12px;
