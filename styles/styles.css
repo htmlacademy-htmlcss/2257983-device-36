@@ -350,7 +350,7 @@ img {
   left: -126px;
   z-index: 2;
   background-color: #000000;
-  display: none;
+
 }
 
 /* Закрытая корзина, будет открываться при клике
@@ -1014,7 +1014,6 @@ img {
   margin: 0 auto;
   margin-bottom: 140px;
   display: flex;
-  z-index: -1;
 }
 
 .services-slider::after {
@@ -1026,18 +1025,8 @@ img {
   top: 102px;
   left: -140px;
   background-color: #F0F0F0;
-  z-index: -1;
+  z-index: -2;
 }
-
-/*.services-slider-background {
-  width: 1440px;
-  height: 289px;
-  position: absolute;
-  top: 102px;
-  left: -140px;
-  background-color: #F0F0F0;
-  z-index: -1;
-}*/
 
 .services-button {
   width: 280px;
@@ -1656,7 +1645,7 @@ img {
   padding: 0;
 
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-menu-link {
