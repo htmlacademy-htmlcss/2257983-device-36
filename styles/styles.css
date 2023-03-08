@@ -1097,7 +1097,7 @@ img {
 }
 
 .services-button-active {
-  font-family: 'Raleway';
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -1804,7 +1804,7 @@ img {
   height: 100%;
   background-color: rgba(248, 246, 246, 0.8);
   z-index: 3;
-  display: none;
+
 }
 
 .modal-delivery {
