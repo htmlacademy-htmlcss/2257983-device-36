@@ -43,6 +43,11 @@ body {
   min-height: 100%;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -60,13 +65,21 @@ body {
 
 .main-header {
   width: 1040px;
-  margin: 20px auto -17px auto;
+  margin: 40px auto -17px;
+  padding: 10px 60px 19px;
+  background-color: #FFE17F;
+}
+
+.main-header-index {
+  padding-bottom: 133px;
+  margin-bottom: -150px;
+
 }
 
 .header-logo-link {
   display: block;
   width: fit-content;
-  margin-bottom: 30px;
+  transform: translateY(-30px);
 }
 
 .logo-svg {
@@ -499,14 +512,6 @@ body {
   outline: 2px solid #AF4FFF;
 }
 
-
-
-
-
-
-
-
-
 .navigation-bottom {
   width: 1040px;
   margin: 0;
@@ -521,6 +526,10 @@ body {
 
 .navigation-bottom-item {
   width: 294px;
+}
+
+.navigation-bottom-item:last-child {
+  align-self: center;
 }
 
 .navigation-bottom-item-end {
@@ -804,18 +813,21 @@ body {
 
 .description-wrapper {
   width: 560px;
+  position: relative;
 }
 
 .product-number {
   display: inline-block;
   position: absolute;
-  bottom: 39px;
+  top: 8px;
   right: 49px;
-
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
 
   font-weight: 700;
   font-size: 180px;
-  line-height: 30px;
+  line-height: 180px;
   color: #FFFFFF;
 }
 
@@ -823,6 +835,9 @@ body {
   margin: 0;
   margin-top: 121px;
   margin-bottom: 29px;
+  z-index: 1;
+  position: inherit;
+
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -862,6 +877,11 @@ body {
   position: relative;
 }
 
+.properties-button:not(:last-child) {
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
 .properties-button::before {
   content: "";
   position: absolute;
@@ -889,8 +909,7 @@ body {
 }
 
 .properties-list {
-  margin: 0;
-  margin-bottom: 38px;
+  margin: 50px 0 38px 0;
   padding: 0;
   list-style: none;
 
@@ -995,9 +1014,22 @@ body {
   margin: 0 auto;
   margin-bottom: 140px;
   display: flex;
+  z-index: -1;
 }
 
-.services-slider-background {
+.services-slider::after {
+  content: "";
+  position: absolute;
+
+  width: 1440px;
+  height: 289px;
+  top: 102px;
+  left: -140px;
+  background-color: #F0F0F0;
+  z-index: -1;
+}
+
+/*.services-slider-background {
   width: 1440px;
   height: 289px;
   position: absolute;
@@ -1005,7 +1037,7 @@ body {
   left: -140px;
   background-color: #F0F0F0;
   z-index: -1;
-}
+}*/
 
 .services-button {
   width: 280px;
@@ -1187,13 +1219,14 @@ body {
 
 .delivery-car-image {
   width: 125px;
-  height: 100px;
-  background-color: #FFE17F;
+  align-self: stretch;
 
+  content: "";
   background-image: url("../images/icon/delivery-car.svg");
-  background-repeat: no-repeat;
-  background-size: 47px 31.1px;
+  background-size: 47px 31px;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: #FFE17F;
 }
 
 .delivery-description {
@@ -1225,7 +1258,7 @@ body {
 .about-us-contacts-wrapper {
   width: 1160px;
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 67px;
   display: flex;
   justify-content: space-between;
 }
@@ -1293,6 +1326,10 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   position: relative;
+}
+
+.about-us-button:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .about-us-button::before {
@@ -1399,10 +1436,15 @@ body {
   box-sizing: border-box;
   display: block;
   width: 259px;
+
   text-decoration: none;
   padding-top: 10px;
   padding-bottom: 10px;
   position: relative;
+}
+
+.contacts-button:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .contacts-button::before {
@@ -1780,7 +1822,6 @@ body {
   position: relative;
   margin: auto;
   width: 920px;
-  height: 568px;
   background-color: #FFFFFF;
   box-sizing: border-box;
   border: 10px solid #000000;
@@ -1794,7 +1835,7 @@ body {
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .modal-delivery-title {
@@ -1803,6 +1844,7 @@ body {
   font-size: 50px;
   line-height: 50px;
 
+  max-width: 730px;
   margin: 0;
   color: #000000;
 }
@@ -1848,6 +1890,7 @@ body {
 
   display: flex;
   flex-direction: column;
+  justify-content: end;
 }
 
 .delivery-label {
@@ -1929,10 +1972,12 @@ body {
 
 /*Модальное окно. 3 строка*/
 .delivery-product {
-  display: flex;
-  gap: 40px;
-
+  width: 760px;
   margin-bottom: 42px;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
 }
 
 .delivery-form-bottom {
@@ -1943,6 +1988,8 @@ body {
 }
 
 .delivery-form-counter {
+  width: 180px;
+
   display: flex;
   flex-direction: column;
 }
@@ -2142,7 +2189,6 @@ body {
 /*Модальное окно. Кнопка отправить*/
 .delivery-button-submit {
   width: 200px;
-  height: 40px;
   position: relative;
   z-index: 0;
 }
@@ -2198,26 +2244,12 @@ body {
 
 /*inner-header*/
 
-.inner-header::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 1160px;
-  height: 186px;
-  background-color: #FFE17F;
-  top: -221px;
-  left: -60px;
-  z-index: -1;
-}
-
 .inner-header {
   width: 1040px;
-  margin: 71px auto 34px auto;
-  position: relative;
+  margin: 52px auto 34px;
 
   display: flex;
   flex-direction: column;
-
 }
 
 .inner-header-title {
@@ -2233,6 +2265,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs-item {
@@ -2320,17 +2353,21 @@ body {
 
 .catalog-filter-group {
   margin: 0;
-  margin-bottom: 47px;
+  margin-bottom: 49px;
   padding: 0;
   border: 0 none;
 }
 
-.catalog-filter-group:last-of-type {
-  margin-bottom: 35px;
+.catalog-filter-group:first-of-type .catalog-filter-title {
+  margin-bottom: 28px;
 }
 
-.catalog-filter-group:first-of-type .catalog-filter-title {
-  margin-bottom: 30px;
+.catalog-filter-group:nth-of-type(2) {
+  margin-bottom: 47px;
+}
+
+.catalog-filter-group:last-of-type {
+  margin-bottom: 35px;
 }
 
 .catalog-filter-title {
@@ -2351,7 +2388,7 @@ body {
   position: absolute;
   width: 200px;
   height: 2px;
-  top: -13px;
+  top: -14px;
   background-color: #000000;
 }
 
@@ -2414,14 +2451,21 @@ body {
 }
 
 .range-input-wrapper {
+  max-width: 200px;
+
   display: flex;
 }
 
 .range-input-label {
   display: flex;
-  margin-right: 19px;
   font-size: 14px;
+
+  width: 90px;
   color: #A8A8A8;
+}
+
+.range-input-label:not(:last-child) {
+  margin-right: 19px;
 }
 
 .range-input {
@@ -2541,6 +2585,7 @@ body {
 
 .filter-button {
   width: 220px;
+  margin-bottom: 10px;
   position: relative;
 }
 
@@ -2585,12 +2630,12 @@ body {
   background-color: #F0F0F0;
 
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
 .sorting-text {
-  max-width: 300px;
+  width: 150px;
+  margin-right: 203px;
 
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -2602,7 +2647,7 @@ body {
 .select-control {
   width: 141px;
   height: 30px;
-  margin-left: auto;
+  margin-right: auto;
 
   font-family: "Rubic", sans-serif;
   font-weight: 400;
@@ -2635,11 +2680,12 @@ body {
 }
 
 .sort-button-list {
+  max-width: 120px;
   padding: 0;
   margin: 0;
-  margin-left: 206px;
 
   display: flex;
+  flex-wrap: wrap;
 }
 
 .sort-button-item {
@@ -2764,16 +2810,21 @@ body {
   z-index: -1;
 }
 
-.product-item-new {
+.product-link::after {
+  content: "";
   position: absolute;
   top: 27px;
   right: 27px;
+  height: 60px;
+  width: 60px;
+  background-image: url("../images/icon/new-product.svg");
+
 }
 
 .product-link:hover .product-img,
 .product-link:hover .product-name,
 .product-link:hover .product-price,
-.product-link:hover .product-item-new {
+.product-link:hover::after {
   opacity: .6;
 }
 
@@ -2832,6 +2883,12 @@ body {
   background-color: #EBEBEB;
 }
 
+.pagination-item:first-child,
+.pagination-item:last-child {
+  display: block;
+  width: 141px;
+}
+
 .pagination-item-link-prev,
 .pagination-item-link-next {
   font-family: "Raleway", sans-serif;
@@ -2871,10 +2928,12 @@ body {
 }
 
 .pagination-number-list {
+  max-width: 400px;
   padding: 0;
   margin: 0;
 
   display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination-number-item {
