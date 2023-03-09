@@ -35,7 +35,7 @@
               <span class="visually-hidden">
                 Поиск
               </span>
-              <input class="search-field" type="search" name="search" id="search-name" placeholder="Поиск по сайту">
+              <input class="search-field" type="search" name="search" id="search-name" placeholder="Поиск по сайту" required>
             </label>
             <button class="search-button" type="submit">Найти</button>
           </form>
@@ -250,51 +250,33 @@
 
         <ul class="category-list">
           <li class="category-item">
-            <a class="category-item-wrapper" href="catalog.html">
-              <div class="category-item-image-wrapper">
-                <img class="category-item-image" src="images/category/virtual-reality-glasses.svg" width="97" height="55" alt="Очки виртуальной реальности">
-              </div>
-              <span class="category-item-description">Виртуальная реальность</span>
+            <a class="category-item-link category-item-link-glasses" href="catalog.html">
+              <h3 class="category-item-description">Виртуальная реальность</h3>
             </a>
           </li>
           <li class="category-item">
-            <a class="category-item-wrapper" href="catalog.html">
-              <div class="category-item-image-wrapper">
-                <img class="category-item-image" src="images/category/monopod.svg" width="86" height="117" alt="Монопод для селфи">
-              </div>
-              <span class="category-item-description">Моноподы &emsp;&emsp; для селфи</span>
+            <a class="category-item-link category-item-link-monopod" href="catalog.html">
+              <h3 class="category-item-description">Моноподы &emsp;&emsp; для селфи</h3>
             </a>
           </li>
           <li class="category-item">
-            <a class="category-item-wrapper" href="catalog.html">
-              <div class="category-item-image-wrapper">
-                <img class="category-item-image" src="images/category/action-camera.svg" width="71" height="87" alt="Экшн-камера">
-              </div>
-              <span class="category-item-description">Экшн-камеры</span>
+            <a class="category-item-link category-item-link-camera" href="catalog.html">
+              <h3 class="category-item-description">Экшн-камеры</h3>
             </a>
           </li>
           <li class="category-item">
-            <a class="category-item-wrapper" href="catalog.html">
-              <div class="category-item-image-wrapper">
-                <img class="category-item-image" src="images/category/fitness-tracker.svg" width="107" height="65" alt="Фитнес-браслет">
-              </div>
-              <span class="category-item-description">Фитнес-браслеты</span>
+            <a class="category-item-link category-item-link-fitness" href="catalog.html">
+              <h3 class="category-item-description">Фитнес-браслеты</h3>
            </a>
           </li>
           <li class="category-item">
-            <a class="category-item-wrapper" href="catalog.html">
-              <div class="category-item-image-wrapper   ">
-                <img class="category-item-image" src="images/category/smart-watch.svg" width="56" height="98" alt="Умные часы">
-              </div>
-              <span class="category-item-description">Умные часы</span>
+            <a class="category-item-link category-item-link-watch" href="catalog.html">
+              <h3 class="category-item-description">Умные часы</h3>
             </a>
           </li>
           <li class="category-item">
-            <a class="category-item-wrapper" href="catalog.html">
-              <div class="category-item-image-wrapper">
-                <img class="category-item-image" src="images/category/quadrocopter.svg" width="132" height="69" alt="Квадрокоптер">
-              </div>
-              <span class="category-item-description">Квадрокоптеры</span>
+            <a class="category-item-link category-item-link-quadrocopter" href="catalog.html">
+              <h3 class="category-item-description">Квадрокоптеры</h3>
             </a>
           </li>
         </ul>
@@ -306,16 +288,16 @@
       <section class="services-slider">
         <h2 class="visually-hidden">Услуги</h2>
 
-        <div class="services-button">
+        <div class="services-button-wrapper">
           <ul class="services-button-list">
-            <li class="services-button-item">
-              <button class="services-button-one services-button-active" type="button">Доставка</button>
+            <li class="services-button-item services-button-item-active">
+              <button class="button services-button services-button-active" type="button">Доставка</button>
             </li>
             <li class="services-button-item">
-              <button class="button services-button-two" type="button">Гарантия</button>
+              <button class="button services-button" type="button">Гарантия</button>
             </li>
             <li class="services-button-item">
-              <button class="button services-button-three" type="button">Кредит</button>
+              <button class="button services-button" type="button">Кредит</button>
             </li>
           </ul>
         </div>
@@ -349,19 +331,7 @@
 
       <section class="delivery">
         <h2 class="visually-hidden">Доставка</h2>
-        <a class="delivery-popup-link" href="#">
-          <div class="delivery-car-image"></div>
-          <p class="delivery-description">Доставим редкий товар под заказ</P>
-          <div class="delivery-button">
-            <svg width="41" height="40" fill="none" viewBox="0 0 41 40">
-              <circle cx="20.5" cy="20" r="20" fill="#DCDCDC" fill-opacity=".5"/>
-                <path class="delivery-button-i" fill="#000" opacity=".3" d="M21 14h-2v2h2v-2ZM21 18h-2v8h2v-8Z"/>
-              <defs>
-                <path fill="#fff" d="M19 14h2v12h-2z"/>
-              </defs>
-            </svg>
-          </div>
-        </a>
+        <a class="delivery-popup-link" href="#">Доставим редкий товар под заказ</a>
       </section>
 
       <div class="about-us-contacts-wrapper">
@@ -423,7 +393,7 @@
                 Подписка
               </span>
             </label>
-            <input class="subscribe-field" type="email" name="subscribe" id="subscribe-name" placeholder="Ваш e-mail">
+            <input class="subscribe-field" type="email" name="subscribe" id="subscribe-name" placeholder="Ваш e-mail" required>
             <button class="button subscribe-button" type="submit">Подписаться</button>
           </form>
           <span class="subscribe-free">Это бесплатно</span>
@@ -562,7 +532,7 @@
 
               <div class="delivery-counter-bottom counter-error">
                 <button class="delivery-counter-box delivery-counter-minus" type="button"><span class="visually-hidden">Минус один</span></button>
-                <input class="delivery-counter-box delivery-counter" type="number" id="product-counter" value="1" min="1">
+                <input class="delivery-counter-box delivery-counter" type="number" id="product-counter" value="1" min="1" required>
                 <button class="delivery-counter-box delivery-counter-plus" type="button"><span class="visually-hidden">Плюс один</span></button>
               </div>
             </form>
